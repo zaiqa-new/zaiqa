@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zaiqa | Authentic Indian Restaurant in Portland, Lake Oswego & Wilsonville</title>
+    <meta name="description" content="Discover Zaiqa, the best authentic Indian and Pakistani restaurant serving Portland, Lake Oswego, Wilsonville, and Ridgefield. Enjoy fresh, halal dishes like biryani, tandoori, and curry. Order online or book a table today!" />
+    <meta name="keywords" content="indian restaurant portland, indian food portland, best indian food lake oswego, halal restaurant wilsonville, zaiqa, authentic indian cuisine, pakistani food, biryani, tandoori, curry, vegan indian food portland, indian food ridgefield" />
+    <meta name="author" content="Seatech Consulting Group" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/logo/zaiqa_logo.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- SEO: JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Zaiqa",
+      "image": "assets/imgs/slider/thali.png",
+      "description": "Family-owned Indian-Pakistani restaurant serving authentic halal dishes made with fresh, high-quality ingredients and bold, aromatic spices across the Portland area.",
+      "telephone": "+1-971-470-3104",
+      "servesCuisine": ["Indian", "Pakistani", "Halal"],
+      "priceRange": "$$",
+      "hasMenu": "#menu",
+      "acceptsReservations": "True",
+      "url": "https://www.zaiqapdx.com",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "15158 Bangy Road",
+          "addressLocality": "Lake Oswego",
+          "addressRegion": "OR",
+          "postalCode": "97035",
+          "addressCountry": "US"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "29030 SW Town Center Loop E #200",
+          "addressLocality": "Wilsonville",
+          "addressRegion": "OR",
+          "postalCode": "97070",
+          "addressCountry": "US"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "3682 South Bond Avenue",
+          "addressLocality": "Portland",
+          "addressRegion": "OR",
+          "postalCode": "97239",
+          "addressCountry": "US"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "536 S Royle Rd Suite 7",
+          "addressLocality": "Ridgefield",
+          "addressRegion": "WA",
+          "postalCode": "98642",
+          "addressCountry": "US"
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* --- DESIGN SYSTEM & GLOBAL STYLES --- */
+        :root {
+            --primary-color: #ff9248; /* Rich Saffron Orange */
+            --secondary-color: #A98A5B; /* Elegant Gold/Tan */
+            --dark-bg: #1a1a1a;
+            --light-bg: #fdfaf3; /* Light Cream */
+            --text-light: #f5f5f5;
+            --text-dark: #333333;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --container-width: 1200px;
+            --border-radius: 8px;
+        }
+
+        /* Basic Reset & Typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        h1 { font-size: 3.5rem; }
+        h2 { font-size: 2.8rem; line-height: 1.2; }
+        h3 { font-size: 1.8rem; }
+        h4 { font-size: 1.5rem; }
+
+        p { font-size: 1rem; margin-bottom: 1rem; }
+        a { color: var(--primary-color); text-decoration: none; }
+        ul { list-style: none; }
+        
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            margin-bottom: 10px;
+        }
+        
+        .section-title .subtitle {
+            font-family: var(--font-body);
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            font-family: var(--font-body);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: var(--border-radius);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center; /* Center text within buttons */
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+        .btn-primary:hover {
+            background-color: #e67e33; /* Darker shade for hover */
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+        
+        /* --- ANNOUNCEMENT BAR --- */
+        .announcement-bar {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            padding: 10px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .scrolling-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-left 30s linear infinite;
+        }
+        .scrolling-text span {
+            margin: 0 30px;
+            color: var(--secondary-color);
+        }
+        .scrolling-text span.quote {
+            color: var(--text-light);
+        }
+        @keyframes scroll-left {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        .main-header {
+            background-color: rgba(26, 26, 26, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 30px;
+        }
+        .main-nav a {
+            color: var(--text-light);
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            position: relative;
+            padding: 5px 0;
+        }
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        .main-nav a:hover::after, .main-nav a.active::after {
+            width: 100%;
+        }
+        .header-right-group {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        /* Mobile Nav */
+        .mobile-nav-toggle { display: none; }
+
+
+        /* --- HERO SLIDER SECTION --- */
+        .hero {
+            position: relative;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            overflow: hidden;
+        }
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        .slide.active {
+            opacity: 1;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 0;
+        }
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-content h1 {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        .hero-content h1 span {
+            color: var(--primary-color);
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        #fading-word-container {
+            transition: opacity 0.5s ease-in-out;
+            display: inline-block;
+            min-width: 220px; /* Adjust based on the longest word to prevent layout shift */
+            text-align: left;
+        }
+
+        /* --- ABOUT SECTION --- */
+        .about-section {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        .about-content, .about-image {
+            flex: 1;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .about-content .section-title {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        /* --- WHY CHOOSE US SECTION --- */
+        .choose-us {
+            background-color: var(--dark-bg);
+        }
+        .choose-us .section-title h2, .choose-us .section-title .subtitle {
+            color: var(--text-light);
+        }
+        .choose-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .choose-us-item {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-light);
+        }
+        .choose-us-item .icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .choose-us-item h4 {
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+        .choose-us-item p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+        
+        /* --- MENU SECTION --- */
+        .menu-tabs {
+            text-align: center;
+            margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .menu-tabs button {
+            background: none;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+            padding: 10px 20px;
+            font-family: var(--font-body);
+            font-weight: 700;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        .menu-tabs button.active, .menu-tabs button:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--text-light);
+        }
+
+        .menu-content { display: none; }
+        .menu-content.active { display: block; }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px 40px;
+        }
+        
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .menu-item-img {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--border-radius);
+            object-fit: cover;
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .menu-item-img:hover {
+            transform: scale(1.1);
+        }
+        .menu-item-details {
+            width: 100%;
+            border-bottom: 1px dashed var(--secondary-color);
+            padding-bottom: 10px;
+        }
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .menu-item h5 {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .menu-item p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0;
+            padding-right: 10px;
+        }
+        .menu-item .price {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            white-space: nowrap;
+        }
+
+        /* --- LOCATIONS SECTION --- */
+        .locations {
+            background-color: var(--light-bg);
+        }
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .location-card {
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .location-card .map-link {
+            display: block;
+            position: relative;
+        }
+        .location-card .map-link::after {
+            content: 'Click for Directions';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .location-card .map-link:hover::after {
+            background-color: rgba(0,0,0,0.5);
+            opacity: 1;
+        }
+
+        .location-card-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: center; /* Center align content */
+        }
+        .location-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .location-card p {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .location-card .info-item {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center icon and text */
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        .location-card .info-item i {
+            color: var(--primary-color);
+            width: 20px;
+            text-align: center;
+        }
+        .location-card-actions {
+            margin-top: auto;
+            padding-top: 15px;
+        }
+        .location-card .btn {
+            width: 100%;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            padding: 10px;
+        }
+        .location-card .btn:last-child {
+            margin-bottom: 0;
+        }
+        .location-card iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            pointer-events: none; /* Makes the iframe not interactive, so the link works */
+        }
+        .location-card .btn[disabled] {
+            background-color: #ccc;
+            border-color: #ccc;
+            cursor: not-allowed;
+            color: #666;
+        }
+        .location-card .btn[disabled]:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+
+        /* --- TESTIMONIALS SECTION --- */
+        .testimonials {
+            background: linear-gradient(rgba(26,26,26,0.9), rgba(26,26,26,0.9)), url('assets/imgs/most-reservation/most-reservation.png') no-repeat center center/cover;
+            color: var(--text-light);
+        }
+        .testimonials .section-title h2, .testimonials .section-title .subtitle {
+            color: var(--text-light);
+        }
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .testimonial-card {
+            text-align: center;
+            padding: 20px;
+        }
+        .testimonial-card .quote-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            opacity: 0.5;
+        }
+        .testimonial-card p {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin: 20px 0;
+            color: rgba(255,255,255,0.9);
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+        }
+        .author-info h5 {
+            margin-bottom: 0;
+            color: var(--text-light);
+            font-family: var(--font-body);
+        }
+        .author-info span {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
+
+        /* --- CATERING SECTION --- */
+        .catering-section {
+            background-color: #fff;
+        }
+        .catering-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        .catering-content, .catering-image {
+            flex: 1;
+        }
+        .catering-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .catering-content .section-title {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .catering-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 30px;
+        }
+        .catering-content ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .catering-content ul li::before {
+            content: '\f00c'; /* Font Awesome check icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            top: 4px;
+        }
+
+        /* --- FOOTER --- */
+        .main-footer {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            padding: 60px 0 0;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-widget h4 {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+        }
+        .footer-widget p, .footer-widget a {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .footer-widget a:hover {
+            color: var(--primary-color);
+        }
+        .footer-widget ul li {
+            margin-bottom: 10px;
+        }
+        .footer-socials a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+        .footer-bottom {
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* --- MODAL STYLES --- */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1001;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal-container {
+            background: var(--light-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            position: relative;
+            width: 90%;
+            max-width: 950px;
+            max-height: 90vh;
+            overflow-y: auto;
+            text-align: center;
+        }
+        .modal-close {
+            position: absolute;
+            top: 15px; right: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--text-dark);
+            cursor: pointer;
+            line-height: 1;
+        }
+        .modal-container h3 {
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+        .modal-locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .modal-location-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        .modal-location-card h4 {
+            margin-bottom: 10px;
+        }
+        .modal-location-card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .modal-location-card .btn {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        .modal-location-card .btn[disabled] {
+            background-color: #ccc;
+            border-color: #ccc;
+            cursor: not-allowed;
+            color: #666;
+        }
+        .modal-location-card .btn[disabled]:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Reservation Iframe Modal Styling */
+        #reservation-modal-container {
+            max-width: 550px;
+            padding: 20px;
+            background-color: var(--dark-bg);
+            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            height: 85vh;
+        }
+        #reservation-modal-container h3 {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+        #reservationIframeContainer {
+            width: 100%; height: calc(100% - 50px);
+        }
+        #reservationIframeContainer iframe {
+            width: 100%; 
+            height: 100%;
+            border: 2px solid var(--secondary-color);
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+        }
+
+        /* Catering Form Modal Styling */
+        #catering-modal .modal-container {
+            max-width: 600px;
+            text-align: left;
+        }
+        #catering-modal p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .catering-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: var(--border-radius);
+            font-family: var(--font-body);
+            font-size: 1rem;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        #catering-form .btn {
+            width: 100%;
+            margin-top: 20px;
+        }
+        #catering-form-status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: var(--border-radius);
+            display: none; /* Hidden by default */
+            text-align: center;
+            font-weight: 500;
+        }
+        #catering-form-status.success {
+            background-color: #d4edda;
+            color: #155724;
+            display: block;
+        }
+        #catering-form-status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+
+        /* Image Lightbox Modal */
+        .lightbox-content {
+            display: block;
+            margin: auto;
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: var(--border-radius);
+        }
+        #image-lightbox-modal .modal-close {
+            color: white;
+            font-size: 40px;
+            top: 15px;
+            right: 35px;
+            text-shadow: 0 0 5px black;
+        }
+
+
+        /* --- RESPONSIVE STYLES --- */
+        @media (max-width: 992px) {
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2.2rem; }
+            .about-section, .catering-container { flex-direction: column; }
+            .menu-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .section { padding: 40px 0; }
+            h1 { font-size: 2.0rem; }
+            h2 { font-size: 1.8rem; }
+            
+            #fading-word-container {
+                min-width: unset;
+                text-align: center;
+                display: block; /* Make it a block to center it */
+            }
+            .hero-content h1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            /* Mobile Nav */
+            .main-nav {
+                display: none;
+                position: absolute;
+                top: 80px; /* Adjust based on header height */
+                left: 0;
+                width: 100%;
+                background-color: var(--dark-bg);
+            }
+            .main-nav.active {
+                display: block;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                padding: 20px;
+                gap: 0;
+            }
+            .main-nav ul li {
+                width: 100%;
+                text-align: center;
+            }
+            .main-nav a {
+                display: block;
+                padding: 15px 0;
+            }
+            .header-cta .btn {
+                padding: 8px 14px;
+                font-size: 0.8rem;
+            }
+            .mobile-nav-toggle {
+                display: block;
+                cursor: pointer;
+                background: none;
+                border: none;
+            }
+            .mobile-nav-toggle .fa-bars {
+                font-size: 1.5rem;
+                color: var(--text-light);
+            }
+
+            .hero { height: 70vh; }
+            .hero-content p { font-size: 1.0rem; margin-bottom: 20px; }
+            .about-section { gap: 20px; }
+            .menu-tabs button { margin: 5px; font-size: 0.8rem; padding: 8px 15px;}
+            .menu-grid { 
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            .menu-item {
+                flex-direction: column;
+                align-items: flex-start;
+                background-color: #fff;
+                padding: 15px;
+                border-radius: var(--border-radius);
+                box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            }
+            .menu-item-img {
+                width: 100%;
+                height: 150px;
+                margin-bottom: 10px;
+            }
+            .location-card-content { padding: 20px; }
+            .catering-container { gap: 30px; }
+            .catering-form-grid { grid-template-columns: 1fr; }
+
+            /* Compact Mobile Footer */
+            .main-footer { padding: 30px 0 0; }
+            .footer-grid {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+                padding-bottom: 20px;
+            }
+            .footer-widget {
+                width: 100%;
+            }
+            .footer-widget h4 {
+                display: none; /* Hide titles on mobile */
+            }
+            .footer-widget ul {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+             .footer-widget ul li {
+                margin-bottom: 0;
+            }
+            .footer-socials {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="scrolling-text">
+            <span class="quote">“At Zaiqa, every bite tells a story—of tradition, taste, and togetherness.”</span>
+            <span>📍 Lake Oswego</span>
+            <span>📍 Wilsonville</span>
+            <span>📍 South Waterfront</span>
+            <span class="quote">“At Zaiqa, every bite tells a story—of tradition, taste, and togetherness.”</span>
+            <span>📍 Lake Oswego</span>
+            <span>📍 Wilsonville</span>
+            <span>📍 South Waterfront</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/imgs/logo/zaiqa_logo.png" alt="Zaiqa Restaurant Logo" />
+            </a>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#locations">Locations</a></li>
+                    <li><a href="#catering">Catering</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                </ul>
+            </nav>
+            <div class="header-right-group">
+                <div class="header-cta">
+                    <button class="btn btn-primary action-button">Order & Reserve</button>
+                </div>
+                <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-slider" id="hero-slider">
+                <!-- Images will be added here by JS -->
+            </div>
+            <div class="hero-content">
+                <h1>Taste the Tradition of <span id="fading-word-container">Zaiqa</span></h1>
+                <p>Authentic Indian & Pakistani cuisine crafted with fresh ingredients and generations of family recipes. Welcome to your new favorite restaurant.</p>
+                <button class="btn btn-primary btn-lg action-button">Explore Our Flavors</button>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="section">
+            <div class="container about-section">
+                <div class="about-image">
+                    <img src="./assets/imgs/reservation/reservation-1.png" alt="Interior of Zaiqa restaurant in Portland showing a cozy dining atmosphere" />
+                </div>
+                <div class="about-content">
+                    <div class="section-title">
+                        <span class="subtitle">Our Story</span>
+                        <h2>Welcome to Zaiqa Indian Cuisine</h2>
+                    </div>
+                    <p>Zaiqa (pronounced zay-kah) means “flavorful, tasty, and savory” in Urdu—and that’s exactly what we bring to every plate. As a family-owned Indian-Pakistani restaurant serving the greater Portland area, we proudly serve authentic dishes made with fresh, high-quality ingredients and bold, aromatic spices.</p>
+                    <p>All our meats are certified halal, and our sauces, chutneys, and spice blends are prepared in-house daily. Every dish is made-to-order with your preferred spice level for a personalized dining experience. At Zaiqa, we’re dedicated to delivering the true taste of India and Pakistan with exceptional service and a warm, welcoming atmosphere.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Why Choose Us Section -->
+        <section id="services" class="section choose-us">
+            <div class="container">
+                <div class="section-title">
+                    <span class="subtitle">Our Promise</span>
+                    <h2>More Than Just a Meal</h2>
+                </div>
+                <div class="choose-us-grid">
+                    <div class="choose-us-item">
+                        <div class="icon"><i class="fas fa-leaf"></i></div>
+                        <h4>Fresh Products</h4>
+                        <p>We use only the freshest locally sourced ingredients, ensuring every bite bursts with flavor.</p>
+                    </div>
+                    <div class="choose-us-item">
+                        <div class="icon"><i class="fas fa-utensils"></i></div>
+                        <h4>Skilled Chefs</h4>
+                        <p>Our chefs bring years of culinary expertise, crafting each dish with precision, care, and creativity.</p>
+                    </div>
+                    <div class="choose-us-item">
+                        <div class="icon"><i class="fas fa-wine-glass-alt"></i></div>
+                        <h4>Drinks & Wine</h4>
+                        <p>Enjoy a curated selection of fine wines and handcrafted beverages to complement your meal.</p>
+                    </div>
+                    <div class="choose-us-item">
+                        <div class="icon"><i class="fas fa-star"></i></div>
+                        <h4>Authentic Recipes</h4>
+                        <p>Our menu features traditional recipes passed down through generations, with a modern twist.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Food Menu Section -->
+        <section id="menu" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <span class="subtitle">Our Menu</span>
+                    <h2>Explore Our Signature Dishes</h2>
+                </div>
+                <div class="menu-tabs" id="menu-tabs">
+                    <button class="active" data-target="appetizers">Appetizers</button>
+                    <button data-target="tandoori-grill">Tandoori Grill</button>
+                    <button data-target="rice">Rice</button>
+                    <button data-target="custom-entrees">Custom Entrées</button>
+                    <button data-target="traditional-entrees">Traditional Entrées</button>
+                    <button data-target="tandoori-bread">Tandoori Bread</button>
+                    <button data-target="desserts">Desserts</button>
+                    <button data-target="kids-menu">Kids Menu</button>
+                    <button data-target="sauces">Sauces</button>
+                    <button data-target="beverages">Beverages</button>
+                </div>
+
+                <!-- Appetizers -->
+                <div id="appetizers" class="menu-content active">
+                    <div class="menu-grid">
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Aloo Tikki Chaat.png" alt="Aloo Tikki Chaat" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Aloo Tikki Chaat</h5><span class="price">$11.00</span></div><p>Potato patties, onions, tomatoes, cilantro, and chickpeas topped with yogurt, mint, and tamarind sauces.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Chicken 65.jpg" alt="Chicken 65" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Chicken 65</h5><span class="price">$15.00</span></div><p>Deep-fried breaded chicken breast pieces served in a tangy and spicy red chili sauce.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Gobi 65.jpg" alt="Gobi 65" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Gobi 65</h5><span class="price">$13.00</span></div><p>Deep-fried breaded cauliflower pieces served in a tangy and spicy red chili sauce.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Green Salad.jpg" alt="Green Salad" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Green Salad</h5><span class="price">$7.00</span></div><p>Lettuce, cucumbers, tomatoes, carrots, and red onions with choice of dressing.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Masala Fish Pakora.jpg" alt="Masala Fish Pakora" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Masala Fish Pakora</h5><span class="price">$12.00</span></div><p>Deep-fried fritters of fish coated with spiced chickpea batter.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Onion Bhaji.jpg" alt="Onion Bhaji" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Onion Bhaji</h5><span class="price">$9.00</span></div><p>Sliced onions coated in spiced chickpea flour batter and deep-fried to a crisp.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Paneer Pakora.jpg" alt="Paneer Pakora" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Paneer Pakora</h5><span class="price">$10.00</span></div><p>Deep-fried fritters of Indian cheese cubes coated with spiced chickpea batter.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Pappadum.jpg" alt="Pappadum" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Pappadum</h5><span class="price">$4.00</span></div><p>Crispy lentil flatbread wafers.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Punjabi Chicken Pakora.jpg" alt="Punjabi Chicken Pakora" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Punjabi Chicken Pakora</h5><span class="price">$12.00</span></div><p>Deep-fried fritters of boneless chicken coated with spiced chickpea batter.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Samosa Chaat.jpg" alt="Samosa Chaat" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Samosa Chaat</h5><span class="price">$11.00</span></div><p>Samosas, onions, tomatoes, cilantro, and chickpeas topped with yogurt, mint, and tamarind sauces.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Vegetable Pakora.png" alt="Vegetable Pakora" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Vegetable Pakora</h5><span class="price">$9.00</span></div><p>Deep-fried fritters of potatoes and onions coated with spiced chickpea batter.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Vegetable Samosa.png" alt="Vegetable Samosa" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Vegetable Samosa</h5><span class="price">$7.00</span></div><p>Deep-fried pastry wraps stuffed with potatoes, peas, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Vegetable Spring Rolls.png" alt="Vegetable Spring Rolls" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Vegetable Spring Rolls</h5><span class="price">$7.00</span></div><p>Mixed veggies wrapped and deep-fried, 4 pieces.</p></div></div>
+                    </div>
+                </div>
+                
+                <!-- Tandoori Grill -->
+                <div id="tandoori-grill" class="menu-content">
+                    <div class="menu-grid">
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Mixed Grill.jpg" alt="Mixed Grill" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Mixed Grill</h5><span class="price">$35.00</span></div><p>Afghani malai tikka, chicken tikka, tandoori chicken, lamb seekh kebab, and lamb chops.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Half Plate Tandoori Chicken.jpg" alt="Half Plate Tandoori Chicken" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Half Plate Tandoori Chicken</h5><span class="price">$12.00</span></div><p>Bone-in chicken leg quarters marinated in tandoori sauce, 4 pieces.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Full Plate Tandoori Chicken.jpg" alt="Full Plate Tandoori Chicken" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Full Plate Tandoori Chicken</h5><span class="price">$22.00</span></div><p>Bone-in chicken leg quarters marinated in tandoori sauce, 8 pieces.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Chicken Tikka Kebab.png" alt="Chicken Tikka Kebab" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Chicken Tikka Kebab</h5><span class="price">$16.00</span></div><p>Tender pieces of boneless, skinless chicken marinated in tandoori sauce.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Afghani Malai Tikka Kebab.png" alt="Afghani Malai Tikka Kebab" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Afghani Malai Tikka Kebab</h5><span class="price">$16.00</span></div><p>Tender pieces of boneless, skinless chicken marinated in spicy cream sauce.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Chicken Seekh Kebab.png" alt="Chicken Seekh Kebab" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Chicken Seekh Kebab</h5><span class="price">$14.00</span></div><p>Ground chicken marinated with spices, ginger, garlic, and cilantro, 8 pieces.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Lamb Seekh Kebab.png" alt="Lamb Seekh Kebab" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Lamb Seekh Kebab</h5><span class="price">$16.00</span></div><p>Ground lamb marinated with spices, ginger, garlic, and cilantro. 8 pieces.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Seekh Kebab Combo.png" alt="Seekh Kebab Combo" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Seekh Kebab Combo</h5><span class="price">$22.00</span></div><p>Combination of lamb and chicken seekh kebabs.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Lamb Chops.jpg" alt="Lamb Chops" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Lamb Chops</h5><span class="price">$30.00</span></div><p>Bone-in lamb chops marinated in tandoori sauce, 6 pieces.</p></div></div>
+                    </div>
+                </div>
+
+                <!-- Rice -->
+                <div id="rice" class="menu-content">
+                    <div class="menu-grid">
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Chicken Biryani.jpg" alt="Chicken Biryani" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Chicken Biryani</h5><span class="price">$19.00</span></div><p>Boneless chicken slow-cooked with biryani masala, spices, and basmati rice.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Chicken Tikka Biryani.jpg" alt="Chicken Tikka Biryani" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Chicken Tikka Biryani</h5><span class="price">$20.00</span></div><p>Boneless chicken tikka kebab pieces slow-cooked with biryani masala, spices, and basmati rice.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Goat Biryani.jpg" alt="Goat Biryani" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Goat Biryani</h5><span class="price">$22.00</span></div><p>Tender bone-in goat meat slow-cooked with biryani masala, spices, and basmati rice.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Lamb Biryani.jpg" alt="Lamb Biryani" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Lamb Biryani</h5><span class="price">$22.00</span></div><p>Tender pieces of lamb slow-cooked with biryani masala, spices, and basmati rice.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Paneer Biryani.jpg" alt="Paneer Biryani" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Paneer Biryani</h5><span class="price">$19.00</span></div><p>Indian cheese cubes slow-cooked with biryani masala, spices, and basmati rice.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Vegetable Biryani.jpg" alt="Vegetable Biryani" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Vegetable Biryani</h5><span class="price">$17.00</span></div><p>Mixed vegetables slow-cooked with biryani masala, spices, and basmati rice.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Basmati Rice.png" alt="Basmati Rice" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Basmati Rice</h5><span class="price">$5.00</span></div><p>Long-grained basmati rice.</p></div></div>
+                    </div>
+                </div>
+
+                <!-- Custom Entrees -->
+                <div id="custom-entrees" class="menu-content">
+                    <div class="menu-grid">
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Achari Masala.jpg" alt="Achari Masala" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Achari Masala</h5><span class="price">$17.00</span></div><p>A spicy and sour traditional Indian spice mix of chillies, masala, and seeds in a tangy tomato sauce.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Butter Masala.jpg" alt="Butter Masala" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Butter Masala</h5><span class="price">$17.00</span></div><p>A rich tomato sauce cooked with onions, masala, and spices topped with cream and butter.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Karahi.jpg" alt="Karahi" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Karahi</h5><span class="price">$17.00</span></div><p>A heavy curry made with onions, tomatoes, capsicum, garlic, masala, onions, bell peppers, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Khorma.png" alt="Khorma" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Khorma</h5><span class="price">$17.00</span></div><p>A thick creamy sauce made with cashew nuts, yogurt, onion paste, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Tikka Masala.png" alt="Tikka Masala" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Tikka Masala</h5><span class="price">$17.00</span></div><p>A tangy tomato sauce prepared with onions, bell peppers, ginger, spices, and cream.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Mango Tikka Masala.png" alt="Mango Tikka Masala" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Mango Tikka Masala</h5><span class="price">$17.00</span></div><p>A sweet and tangy tomato sauce made with cream and mango purée cooked with onions, bell peppers, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Saagwala.jpg" alt="Saagwala" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Saagwala</h5><span class="price">$17.00</span></div><p>A creamy mixture of fresh greens, spinach, onions, tomatoes, garlic, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Vindaloo.png" alt="Vindaloo" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Vindaloo</h5><span class="price">$17.00</span></div><p>A spicy sauce made with red chili peppers, potatoes, vinegar, cumin, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Madras Curry.jpg" alt="Madras Curry" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Madras Curry</h5><span class="price">$17.00</span></div><p>A south Indian curry prepared with onions, coconut milk, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Rajasthani Curry.jpg" alt="Rajasthani Curry" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Rajasthani Curry</h5><span class="price">$17.00</span></div><p>A thick sauce made with onions, tomatoes, ginger, garlic, fennel, black pepper, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Methi Curry.jpg" alt="Methi Curry" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Methi Curry</h5><span class="price">$17.00</span></div><p>A creamy north indian dish prepared with fenugreek leaves, turmeric, and spices.</p></div></div>
+                    </div>
+                </div>
+
+                <!-- Traditional Entrees -->
+                <div id="traditional-entrees" class="menu-content">
+                    <div class="menu-grid">
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Aloo Gobi Masala.png" alt="Aloo Gobi Masala" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Aloo Gobi Masala</h5><span class="price">$17.00</span></div><p>Cauliflower, potatoes, onions, ginger, garlic, masala, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Aloo Matar Masala.jpg" alt="Aloo Matar Masala" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Aloo Matar Masala</h5><span class="price">$17.00</span></div><p>Peas, potatoes, onions, tomatoes, ginger, garlic, masala, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Baingan Bharta.jpg" alt="Baingan Bharta" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Baingan Bharta</h5><span class="price">$17.00</span></div><p>A savory mash made with grilled eggplants, onions, tomatoes, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Chaana Masala.png" alt="Chaana Masala" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Chaana Masala</h5><span class="price">$17.00</span></div><p>Chickpeas prepared with onions, tomatoes, ginger, garlic, masala, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Malai Kofta.png" alt="Malai Kofta" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Malai Kofta</h5><span class="price">$17.00</span></div><p>Fried potato and paneer dumplings cooked in a creamy cashew and onion sauce with spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Mixed Vegetable Masala.jpg" alt="Mixed Vegetable Masala" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Mixed Vegetable Masala</h5><span class="price">$17.00</span></div><p>Mixed vegetables prepared in a paste of onions, masala, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Navratan Korma.png" alt="Navratan Korma" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Navratan Korma</h5><span class="price">$17.00</span></div><p>Mixed vegetables and dried fruits cooked in a creamy cashew sauce with spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Dahl Makhni.jpg" alt="Dahl Makhni" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Dahl Makhni</h5><span class="price">$17.00</span></div><p>Urad lentils and kidney beans cooked with butter, tomatoes, ginger, garlic, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Punjabi Dahl Tadka.jpg" alt="Punjabi Dahl Tadka" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Punjabi Dahl Tadka</h5><span class="price">$17.00</span></div><p>A savory lentil stew cooked with ginger, garlic, onion, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Punjabi Goat Masala.png" alt="Punjabi Goat Masala" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Punjabi Goat Masala</h5><span class="price">$22.00</span></div><p>A special dish of tender bone-in goat meat cooked with onions, tomatoes, ginger, masala, cumin, and spices.</p></div></div>
+                    </div>
+                </div>
+
+                <!-- Tandoori Bread -->
+                <div id="tandoori-bread" class="menu-content">
+                    <div class="menu-grid">
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Bread Basket.png" alt="Bread Basket" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Bread Basket</h5><span class="price">$18.00</span></div><p>Plain naan, garlic naan, garlic cheese naan, and punjabi paratha.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Plain Naan.png" alt="Plain Naan" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Plain Naan</h5><span class="price">$3.00</span></div><p>Soft leavened flatbread made from white flour.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Butter Naan.png" alt="Butter Naan" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Butter Naan</h5><span class="price">$4.00</span></div><p>Topped with butter.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Garlic Naan.jpg" alt="Garlic Naan" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Garlic Naan</h5><span class="price">$5.00</span></div><p>Topped with fresh garlic and cilantro.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Garlic Cheese Naan.png" alt="Garlic Cheese Naan" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Garlic Cheese Naan</h5><span class="price">$7.00</span></div><p>Stuffed with mozzarella cheese and topped with garlic and cilantro.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Chili Cheese Naan.jpg" alt="Chili Cheese Naan" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Chili Cheese Naan</h5><span class="price">$7.00</span></div><p>Stuffed with mozzarella cheese and green chili peppers.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Spinach Cheese Naan.jpg" alt="Spinach Cheese Naan" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Spinach Cheese Naan</h5><span class="price">$7.00</span></div><p>Stuffed with mozzarella cheese and spinach.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Aloo Paratha.jpg" alt="Aloo Paratha" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Aloo Paratha</h5><span class="price">$5.00</span></div><p>Flaky unleavened whole wheat flatbread stuffed with potatoes and spices and topped with butter.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Lacha Paratha.jpg" alt="Lacha Paratha" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Lacha Paratha</h5><span class="price">$4.00</span></div><p>Flaky unleavened whole wheat flatbread topped with butter.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Punjabi Batura.jpgg" alt="Punjabi Batura" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Punjabi Batura</h5><span class="price">$4.00</span></div><p>Deep-fried leavened flatbread.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Tandoori Roti.png" alt="Tandoori Roti" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Tandoori Roti</h5><span class="price">$3.00</span></div><p>Whole wheat unleavened flatbread.</p></div></div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div id="desserts" class="menu-content">
+                     <div class="menu-grid">
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Gulab Jamun.png" alt="Gulab Jamun" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Gulab Jamun</h5><span class="price">$7.00</span></div><p>Fried semolina and milk donut balls, soaked in a sweet syrup, 3 pieces.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Rasmalai.jpeg" alt="Rasmalai" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Rasmalai</h5><span class="price">$7.00</span></div><p>Cottage cheese dumplings soaked in sweet flavored milk, 2 pieces.</p></div></div>
+                    </div>
+                </div>
+
+                <!-- Kids Menu -->
+                <div id="kids-menu" class="menu-content">
+                     <div class="menu-grid">
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Fries.jpg" alt="Fries" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Fries</h5><span class="price">$5.00</span></div><p>Deep-fried shoestring french fries.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Chicken Strips.png" alt="Chicken Strips" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Chicken Strips</h5><span class="price">$7.00</span></div><p>Deep-fried strips of breaded chicken.</p></div></div>
+                    </div>
+                </div>
+
+                <!-- Sauces -->
+                <div id="sauces" class="menu-content">
+                     <div class="menu-grid">
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Raita.png" alt="Raita" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Raita</h5><span class="price">$5.00</span></div><p>A creamy house-made yogurt sauce mixed with cucumber, onions, carrots, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Mint Chutney.png" alt="Mint Chutney" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Mint Chutney</h5><span class="price">$3.00</span></div><p>A creamy house-made yogurt sauce mixed with mint and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Tamarind Sauce.jpg" alt="Tamarind Sauce" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Tamarind Sauce</h5><span class="price">$3.00</span></div><p>A tangy sweet and spicy sauce made with tamarind, ginger, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Mango Chutney.jpg" alt="Mango Chutney" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Mango Chutney</h5><span class="price">$3.00</span></div><p>A sweet mango jam made from mango paste and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Achar Pickle Mix.png" alt="Achar Pickle Mix" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Achar Pickle Mix</h5><span class="price">$3.00</span></div><p>Mixed vegetables pickled in custard oil and Indian spices.</p></div></div>
+                    </div>
+                </div>
+                
+                <!-- Beverages -->
+                <div id="beverages" class="menu-content">
+                     <div class="menu-grid">
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Mango Lassi.png" alt="Mango Lassi" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Mango Lassi</h5><span class="price">$6.00</span></div><p>Mango purée, buttermilk, yogurt, and sugar.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Sweet Lassi.png" alt="Sweet Lassi" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Sweet Lassi</h5><span class="price">$5.00</span></div><p>Buttermilk, yogurt, and sugar.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Salty Lassi.png" alt="Salty Lassi" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Salty Lassi</h5><span class="price">$5.00</span></div><p>Buttermilk, yogurt, and salt.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Fresh Coconut Water.jpg" alt="Fresh Coconut Water" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Fresh Coconut Water</h5><span class="price">$8.00</span></div><p>Fresh coconut water in a coconut shell.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Chai Milk Tea.png" alt="Chai Milk Tea" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Chai Milk Tea</h5><span class="price">$4.00</span></div><p>Masala chai tea with milk, sugar, ginger, and spices.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Soda Bottle.jpg" alt="Soda Bottle" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Soda Bottle</h5><span class="price">$4.00</span></div></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Water Bottle.jpg" alt="Water Bottle" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Water Bottle</h5><span class="price">$4.00</span></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Locations Section -->
+        <section id="locations" class="section locations">
+            <div class="container">
+                <div class="section-title">
+                    <span class="subtitle">Visit Us</span>
+                    <h2>Our Northwest Locations</h2>
+                </div>
+                <div class="locations-grid">
+                    <!-- Location 1: Portland (Lake Oswego) -->
+                    <div class="location-card">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Zaiqa+Indian+Cuisine+-+Lake+Oswego" target="_blank" class="map-link">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125223.68475976317!2d-122.86693936089365!3d45.35696413227676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495731325691c1d%3A0x8d452feced3c8bc1!2sZaiqa%20Indian%20Cuisine%20-%20Lake%20Oswego!5e1!3m2!1sen!2sus!4v1755053287149!5m2!1sen!2sus" loading="lazy"></iframe>
+                        </a>
+                        <div class="location-card-content">
+                            <h4>Lake Oswego</h4>
+                            <div class="info-item"><i class="fas fa-map-marker-alt"></i><p>15158 Bangy Road, Lake Oswego, OR 97035</p></div>
+                            <div class="info-item"><i class="fas fa-phone"></i><p><a href="tel:19714703104">(971) 470-3104</a></p></div>
+                            <div class="info-item"><i class="fas fa-clock"></i><p>Mon–Sun: 11:00 AM – 9:00 PM</p></div>
+                            <div class="location-card-actions">
+                                <a href="https://order.toasttab.com/online/zaiqa-lake-oswego" class="btn btn-primary">Order Online</a>
+                                <button class="btn btn-secondary reserve-button" data-location="lake-oswego">Book a Table</button>
+                                <a href="https://www.toasttab.com/zaiqa-lake-oswego/giftcards" class="btn btn-secondary">Gift Cards</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Location 2: Wilsonville -->
+                    <div class="location-card">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Zaiqa+Indian+Cuisine+-+Wilsonville" target="_blank" class="map-link">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d692.341865526609!2d-122.76296518818535!3d45.3101393425939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54956fba7c57eff1%3A0x65d1172f69a01af8!2sZaiqa%20Indian%20Cuisine%20-%20Wilsonville!5e1!3m2!1sen!2sus!4v1755053262102!5m2!1sen!2sus" loading="lazy"></iframe>
+                        </a>
+                        <div class="location-card-content">
+                            <h4>Wilsonville</h4>
+                            <div class="info-item"><i class="fas fa-map-marker-alt"></i><p>29030 SW Town Center Loop E #200, Wilsonville, OR 97070</p></div>
+                            <div class="info-item"><i class="fas fa-phone"></i><p><a href="tel:15037194072">(503) 719-4072</a></p></div>
+                            <div class="info-item"><i class="fas fa-clock"></i><p>Mon–Sun: 11:00 AM – 9:00 PM</p></div>
+                            <div class="location-card-actions">
+                                <a href="https://order.toasttab.com/online/zaiqa-wilsonville" class="btn btn-primary">Order Online</a>
+                                <button class="btn btn-secondary reserve-button" data-location="wilsonville">Book a Table</button>
+                                <a href="https://www.toasttab.com/zaiqa-wilsonville/giftcards" class="btn btn-secondary">Gift Cards</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Location 3: South Waterfront -->
+                    <div class="location-card">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Zaiqa+Indian+Cuisine+-+South+Waterfront" target="_blank" class="map-link">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44171.425690096825!2d-122.7260243432147!3d45.486972273361474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950bf5f0817967%3A0xa81a8bd01b3572c8!2sZaiqa%20Indian%20Cuisine%20-%20South%20Waterfront!5e1!3m2!1sen!2sus!4v1755053300687!5m2!1sen!2sus" loading="lazy"></iframe>
+                        </a>
+                        <div class="location-card-content">
+                            <h4>South Waterfront</h4>
+                            <div class="info-item"><i class="fas fa-map-marker-alt"></i><p>3682 South Bond Avenue, Portland, OR 97239</p></div>
+                            <div class="info-item"><i class="fas fa-phone"></i><p><a href="tel:19717544913">(971) 754-4913</a></p></div>
+                            <div class="info-item"><i class="fas fa-clock"></i><p>Mon–Sun: 11:00 AM – 9:00 PM</p></div>
+                            <div class="location-card-actions">
+                                <a href="https://order.toasttab.com/online/zaiqapdx" class="btn btn-primary">Order Online</a>
+                                <button class="btn btn-secondary reserve-button" data-location="south-waterfront">Book a Table</button>
+                                <a href="https://www.toasttab.com/zaiqapdx/giftcards" class="btn btn-secondary">Gift Cards</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Location 4: Ridgefield -->
+                    <div class="location-card">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=536+S+Royle+Rd+Suite+7,+Ridgefield,+WA+98642" target="_blank" class="map-link">
+                            <iframe src="https://maps.google.com/maps?q=536+S+Royle+Rd+Suite+7,+Ridgefield,+WA+98642&z=14&output=embed" loading="lazy"></iframe>
+                        </a>
+                        <div class="location-card-content">
+                            <h4>Ridgefield, WA</h4>
+                            <div class="info-item"><i class="fas fa-map-marker-alt"></i><p>536 S Royle Rd Suite 7, Ridgefield, WA 98642</p></div>
+                            <div class="info-item"><i class="fas fa-phone"></i><p><a href="tel:15551234567">(555) 123-4567</a></p></div>
+                            <div class="info-item"><i class="fas fa-clock"></i><p>Mon–Sun: 11:00 AM – 9:00 PM</p></div>
+                            <div class="location-card-actions">
+                                <!-- TODO: Replace # with actual links when available -->
+                                <a href="#" class="btn btn-primary">Order Online</a>
+                                <button class="btn btn-secondary reserve-button" data-location="ridgefield">Book a Table</button>
+                                <a href="#" class="btn btn-secondary">Gift Cards</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Catering Section -->
+        <section id="catering" class="section catering-section">
+            <div class="container catering-container">
+                <div class="catering-content">
+                    <div class="section-title">
+                        <span class="subtitle">Events & Catering</span>
+                        <h2>Flavor for Any Occasion</h2>
+                    </div>
+                    <p>Bring the authentic taste of Zaiqa to your next event. From intimate family gatherings and birthday parties to large corporate lunches and weddings, we offer a memorable culinary experience for you and your guests.</p>
+                    <ul>
+                        <li>Customizable menus to fit your event's needs.</li>
+                        <li>Vegan, vegetarian, and gluten-free options available.</li>
+                        <li>Freshly prepared dishes using authentic spices.</li>
+                        <li>Professional service for a seamless experience.</li>
+                    </ul>
+                    <button class="btn btn-primary" id="catering-inquiry-button">Inquire Now</button>
+                </div>
+                <div class="catering-image">
+                    <img src="./assets/imgs/slider/thali.png" alt="A beautiful spread of Zaiqa's Indian catering dishes" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <span class="subtitle">Customer Feedback</span>
+                    <h2>What Our Guests Say</h2>
+                </div>
+                <!-- You can use a library like Swiper.js for the slider -->
+                <div class="testimonial-slider">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>Zaiqa never fails to impress! The biryani was packed with flavor, the naan was perfectly soft, and the butter chicken melted in my mouth. Truly an authentic taste of home with world-class service.</p>
+                        <div class="testimonial-author">
+                            <img src="./assets/imgs/client-feedback/1.png" alt="Aarav Malhotra, a happy customer at Zaiqa">
+                            <div class="author-info">
+                                <h5>Aarav Malhotra</h5>
+                                <span>Food Blogger</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <h4>Contact Zaiqa</h4>
+                    <img src="assets/imgs/logo/zaiqa_logo.png" alt="Zaiqa Restaurant Logo" style="height: 40px; margin-bottom: 15px;">
+                    <p>Email- zaiqapdx@gmail.com</p>
+                </div>
+                 <div class="footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Our Menu</a></li>
+                        <li><a href="#locations">Locations</a></li>
+                        <li><a href="#catering">Catering</a></li>
+                        <li><a href="#" class="action-button">Reservations</a></li>
+                    </ul>
+                </div>
+                 <div class="footer-widget">
+                    <h4>Follow Us</h4>
+                    <p>Stay updated with our latest news and offers.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link-trigger" data-social="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link-trigger" data-social="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link-trigger" data-social="tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link-trigger" data-social="yelp" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zaiqa Restaurants. All Rights Reserved. Managed by <a href="https://www.seatechconsulting.com" target="_blank">Seatech Consulting Group</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Unified Action Modal -->
+    <div class="modal-overlay" id="action-modal">
+        <div class="modal-container">
+            <span class="modal-close" id="action-modal-close">&times;</span>
+            <h3>Choose a Location</h3>
+            <div class="modal-locations-grid">
+                <!-- Lake Oswego Card -->
+                <div class="modal-location-card">
+                    <h4>Lake Oswego</h4>
+                    <p>15158 Bangy Road, Lake Oswego, OR 97035</p>
+                    <a href="https://order.toasttab.com/online/zaiqa-lake-oswego" class="btn btn-primary">Order Online</a>
+                    <button class="btn btn-secondary reserve-button" data-location="lake-oswego">Book a Table</button>
+                    <a href="https://www.toasttab.com/zaiqa-lake-oswego/giftcards" class="btn btn-secondary">Gift Cards</a>
+                </div>
+                <!-- Wilsonville Card -->
+                <div class="modal-location-card">
+                    <h4>Wilsonville</h4>
+                    <p>29030 SW Town Center Loop E #200, Wilsonville, OR 97070</p>
+                    <a href="https://order.toasttab.com/online/zaiqa-wilsonville" class="btn btn-primary">Order Online</a>
+                    <button class="btn btn-secondary reserve-button" data-location="wilsonville">Book a Table</button>
+                    <a href="https://www.toasttab.com/zaiqa-wilsonville/giftcards" class="btn btn-secondary">Gift Cards</a>
+                </div>
+                <!-- South Waterfront Card -->
+                <div class="modal-location-card">
+                    <h4>South Waterfront</h4>
+                    <p>3682 South Bond Avenue, Portland, OR 97239</p>
+                    <a href="https://order.toasttab.com/online/zaiqapdx" class="btn btn-primary">Order Online</a>
+                    <button class="btn btn-secondary reserve-button" data-location="south-waterfront">Book a Table</button>
+                    <a href="https://www.toasttab.com/zaiqapdx/giftcards" class="btn btn-secondary">Gift Cards</a>
+                </div>
+                <!-- Ridgefield Card -->
+                <div class="modal-location-card">
+                    <h4>Ridgefield, WA</h4>
+                    <p>536 S Royle Rd Suite 7, Ridgefield, WA 98642</p>
+                    <a href="#" class="btn btn-primary">Order Online</a>
+                    <button class="btn btn-secondary reserve-button" data-location="ridgefield">Book a Table</button>
+                    <a href="#" class="btn btn-secondary">Gift Cards</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Social Media Location Modal -->
+    <div class="modal-overlay" id="social-modal">
+        <div class="modal-container">
+            <span class="modal-close" id="social-modal-close">&times;</span>
+            <h3 id="social-modal-title">Choose a Location</h3>
+            <div class="modal-locations-grid" id="social-locations-grid">
+                <!-- Links will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Reservation Iframe Modal -->
+    <div class="modal-overlay" id="reservation-modal">
+        <div class="modal-container" id="reservation-modal-container">
+            <span class="modal-close" id="reservation-modal-close">&times;</span>
+            <h3>Book Your Table</h3>
+            <div id="reservationIframeContainer"></div>
+        </div>
+    </div>
+    
+    <!-- Catering Inquiry Modal -->
+    <div class="modal-overlay" id="catering-modal">
+        <div class="modal-container">
+            <span class="modal-close" id="catering-modal-close">&times;</span>
+            <h3>Catering Inquiry</h3>
+            <p>To inquire, call <a href="tel:503-236-0714">(503)-236-0714</a> or fill out the form below.</p>
+            <form name="catering-inquiry" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="catering-inquiry" />
+                <div class="catering-form-grid">
+                    <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" required></div>
+                    <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" required></div>
+                    <div class="form-group full-width"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+                    <div class="form-group"><label for="event-type">Type of Event</label><input type="text" id="event-type" name="event-type"></div>
+                    <div class="form-group"><label for="event-location">Event Location/Address</label><input type="text" id="event-location" name="event-location"></div>
+                    <div class="form-group"><label for="event-date">Date of Event</label><input type="date" id="event-date" name="event-date"></div>
+                    <div class="form-group"><label for="guest-count"># of Guests</label><input type="number" id="guest-count" name="guest-count" min="1"></div>
+                    <div class="form-group full-width"><label for="budget">Total Budget Range (Per Person)</label><input type="text" id="budget" name="budget"></div>
+                    <div class="form-group full-width"><label for="requests">Description / Requests (optional)</label><textarea id="requests" name="requests"></textarea></div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+            </form>
+             <div id="catering-form-status"></div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div class="modal-overlay" id="image-lightbox-modal">
+        <span class="modal-close" id="image-lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-image" src="" alt="Enlarged menu item">
+    </div>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // --- HERO SLIDER ---
+        const sliderContainer = document.getElementById('hero-slider');
+        const images = [
+            './assets/imgs/slider/thali.png',
+            './assets/imgs/slider/chickentikka.png',
+            './assets/imgs/slider/chickencurry.png',
+            './assets/imgs/slider/gulabjamun.png'
+        ];
+        let currentImageIndex = 0;
+
+        images.forEach((src, index) => {
+            const slide = document.createElement('div');
+            slide.className = 'slide';
+            slide.style.backgroundImage = `url(${src})`;
+            if (index === 0) slide.classList.add('active');
+            sliderContainer.appendChild(slide);
+        });
+
+        const slides = document.querySelectorAll('.slide');
+        setInterval(() => {
+            slides[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex + 1) % slides.length;
+            slides[currentImageIndex].classList.add('active');
+        }, 5000);
+
+        // --- FADING WORD EFFECT ---
+        const fadingWordContainer = document.getElementById('fading-word-container');
+        const words = ['Zaiqa', 'India', 'Asia', 'the World'];
+        let wordIndex = 0;
+
+        setInterval(() => {
+            fadingWordContainer.style.opacity = 0; // Fade out
+            setTimeout(() => {
+                wordIndex = (wordIndex + 1) % words.length;
+                fadingWordContainer.textContent = words[wordIndex];
+                fadingWordContainer.style.opacity = 1; // Fade in
+            }, 500); // This timeout should match the CSS transition duration
+        }, 3000); // Change word every 3 seconds
+
+        // --- MOBILE NAVIGATION ---
+        const mobileNavToggle = document.getElementById('mobile-nav-toggle');
+        const mainNav = document.getElementById('main-nav');
+        mobileNavToggle.addEventListener('click', () => mainNav.classList.toggle('active'));
+        mainNav.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') mainNav.classList.remove('active');
+        });
+
+        // --- MENU TABS LOGIC ---
+        const menuTabsContainer = document.getElementById('menu-tabs');
+        const menuContents = document.querySelectorAll('.menu-content');
+        menuTabsContainer.addEventListener('click', (e) => {
+            if (e.target.tagName === 'BUTTON') {
+                menuTabsContainer.querySelector('.active').classList.remove('active');
+                e.target.classList.add('active');
+                menuContents.forEach(content => {
+                    content.classList.toggle('active', content.id === e.target.dataset.target);
+                });
+            }
+        });
+
+        // --- MODAL LOGIC ---
+        const actionModal = document.getElementById('action-modal');
+        const openModalButtons = document.querySelectorAll('.action-button');
+        const closeModalButton = document.getElementById('action-modal-close');
+        
+        const reservationModal = document.getElementById('reservation-modal');
+        const openReservationButtons = document.querySelectorAll('.reserve-button');
+        const closeReservationButton = document.getElementById('reservation-modal-close');
+        const iframeContainer = document.getElementById('reservationIframeContainer');
+        
+        const socialModal = document.getElementById('social-modal');
+        const socialModalClose = document.getElementById('social-modal-close');
+        const socialLinkTriggers = document.querySelectorAll('.social-link-trigger');
+        const socialLocationsGrid = document.getElementById('social-locations-grid');
+        const socialModalTitle = document.getElementById('social-modal-title');
+        
+        const cateringModal = document.getElementById('catering-modal');
+        const openCateringButton = document.getElementById('catering-inquiry-button');
+        const closeCateringButton = document.getElementById('catering-modal-close');
+        const cateringForm = document.querySelector('form[name="catering-inquiry"]');
+        
+        const imageLightboxModal = document.getElementById('image-lightbox-modal');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const closeLightboxButton = document.getElementById('image-lightbox-close');
+        const menuImages = document.querySelectorAll('.menu-item-img');
+
+        const socialLinks = {
+            'lake-oswego': { facebook: 'https://www.facebook.com/zaiqapdx', instagram: 'https://www.instagram.com/zaiqapdx/', tiktok: 'https://www.tiktok.com/@zaiqapdx', yelp: 'https://www.yelp.com/biz/zaiqa-indian-cuisine-lake-oswego' },
+            'wilsonville': { facebook: 'https://www.facebook.com/zaiqapdx', instagram: 'https://www.instagram.com/zaiqapdx/', tiktok: 'https://www.tiktok.com/@zaiqapdx', yelp: 'https://www.yelp.com/biz/zaiqa-indian-cuisine-wilsonville-3' },
+            'south-waterfront': { facebook: 'https://www.facebook.com/zaiqapdx', instagram: 'https://www.instagram.com/zaiqapdx/', tiktok: 'https://www.tiktok.com/@zaiqapdx', yelp: 'https://www.yelp.com/biz/zaiqa-indian-cuisine-south-waterfront-portland' },
+            'ridgefield': { facebook: '#', instagram: '#', tiktok: '#', yelp: '#' } // Placeholder links
+        };
+        
+        const iframeSources = {
+            "lake-oswego": "https://eatapp.co/reserve/zaiqa-indian-cuisine-lake-oswego-15158-bangy-road?source=iframe",
+            "wilsonville": "https://eatapp.co/reserve/zaiqa-indian-cuisine-wilsonville-200-29030-southwest-town-center-loop-east?source=iframe",
+            "south-waterfront": "https://eatapp.co/reserve/zaiqa-indian-cuisine-south-waterfront-3682-south-bond-avenue?source=iframe",
+            "ridgefield": "#" // Placeholder
+        };
+
+        // Generic Modal Handlers
+        const setupModal = (modal, openTriggers, closeTrigger) => {
+            openTriggers.forEach(trigger => trigger.addEventListener('click', (e) => { e.preventDefault(); modal.classList.add('active'); }));
+            closeTrigger.addEventListener('click', () => modal.classList.remove('active'));
+            modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+        };
+
+        setupModal(actionModal, openModalButtons, closeModalButton);
+        setupModal(socialModal, [], socialModalClose);
+        setupModal(reservationModal, [], closeReservationButton);
+        setupModal(cateringModal, [openCateringButton], closeCateringButton);
+        setupModal(imageLightboxModal, [], closeLightboxButton);
+        
+        // Social Modal Specific Logic
+        socialLinkTriggers.forEach(trigger => {
+            trigger.addEventListener('click', e => {
+                e.preventDefault();
+                const socialPlatform = trigger.dataset.social;
+                socialModalTitle.textContent = `Choose a location for ${socialPlatform}`;
+                socialLocationsGrid.innerHTML = `
+                    <a href="${socialLinks['lake-oswego'][socialPlatform]}" target="_blank" class="btn btn-primary">Lake Oswego</a>
+                    <a href="${socialLinks['wilsonville'][socialPlatform]}" target="_blank" class="btn btn-primary">Wilsonville</a>
+                    <a href="${socialLinks['south-waterfront'][socialPlatform]}" target="_blank" class="btn btn-primary">South Waterfront</a>
+                    <a href="${socialLinks['ridgefield'][socialPlatform]}" target="_blank" class="btn btn-primary">Ridgefield</a>
+                `;
+                socialModal.classList.add('active');
+            });
+        });
+
+        // Reservation Modal Specific Logic
+        openReservationButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const locationKey = e.target.dataset.location;
+                if (iframeSources[locationKey] && iframeSources[locationKey] !== '#') {
+                    iframeContainer.innerHTML = `<iframe title="Reservation Widget" frameborder="0" src="${iframeSources[locationKey]}"></iframe>`;
+                    actionModal.classList.remove('active');
+                    reservationModal.classList.add('active');
+                } else {
+                    // Fallback for Ridgefield or if link is missing
+                    alert('Online reservations for this location are coming soon!');
+                }
+            });
+        });
+        
+        // Netlify Catering Form Submission
+        const handleSubmit = (event) => {
+            event.preventDefault();
+            const myForm = event.target;
+            const formData = new FormData(myForm);
+            const statusMessage = document.getElementById('catering-form-status');
+            
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+            })
+            .then(() => {
+                statusMessage.textContent = "Thank you! Your inquiry has been sent.";
+                statusMessage.className = 'success';
+                myForm.reset();
+                setTimeout(() => {
+                    cateringModal.classList.remove('active');
+                    statusMessage.className = '';
+                    statusMessage.textContent = '';
+                }, 3000);
+            })
+            .catch((error) => {
+                statusMessage.textContent = "Sorry, there was an error. Please try again.";
+                statusMessage.className = 'error';
+                console.error(error);
+            });
+        };
+
+        cateringForm.addEventListener("submit", handleSubmit);
+
+        // Image Lightbox Logic
+        menuImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImage.src = img.src;
+                imageLightboxModal.classList.add('active');
+            });
+        });
+
+    });
+    </script>
+</body>
+</html>
