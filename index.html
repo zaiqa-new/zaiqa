@@ -9,7 +9,7 @@
     <meta name="author" content="Seatech Consulting Group" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/logo/zaiqa_logo.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/favicon.png" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,6 +68,16 @@
         }
       ]
     }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17298799810"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17298799810');
     </script>
 
     <style>
@@ -194,7 +204,7 @@
         .scrolling-text {
             display: inline-block;
             padding-left: 100%;
-            animation: scroll-left 30s linear infinite;
+            animation: scroll-left 35s linear infinite;
         }
         .scrolling-text span {
             margin: 0 30px;
@@ -1005,10 +1015,12 @@
             <span>📍 Lake Oswego</span>
             <span>📍 Wilsonville</span>
             <span>📍 South Waterfront</span>
+            <span>📍 Ridgefield (Coming Soon)</span>
             <span class="quote">“At Zaiqa, every bite tells a story—of tradition, taste, and togetherness.”</span>
             <span>📍 Lake Oswego</span>
             <span>📍 Wilsonville</span>
             <span>📍 South Waterfront</span>
+            <span>📍 Ridgefield (Coming Soon)</span>
         </div>
     </div>
 
@@ -1214,7 +1226,7 @@
                         <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Spinach Cheese Naan.jpg" alt="Spinach Cheese Naan" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Spinach Cheese Naan</h5><span class="price">$7.00</span></div><p>Stuffed with mozzarella cheese and spinach.</p></div></div>
                         <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Aloo Paratha.jpg" alt="Aloo Paratha" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Aloo Paratha</h5><span class="price">$5.00</span></div><p>Flaky unleavened whole wheat flatbread stuffed with potatoes and spices and topped with butter.</p></div></div>
                         <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Lacha Paratha.jpg" alt="Lacha Paratha" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Lacha Paratha</h5><span class="price">$4.00</span></div><p>Flaky unleavened whole wheat flatbread topped with butter.</p></div></div>
-                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Punjabi Batura.jpgg" alt="Punjabi Batura" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Punjabi Batura</h5><span class="price">$4.00</span></div><p>Deep-fried leavened flatbread.</p></div></div>
+                        <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Punjabi Batura.jpg" alt="Punjabi Bhatura" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Punjabi Batura</h5><span class="price">$4.00</span></div><p>Deep-fried leavened flatbread.</p></div></div>
                         <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Tandoori Roti.png" alt="Tandoori Roti" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Tandoori Roti</h5><span class="price">$3.00</span></div><p>Whole wheat unleavened flatbread.</p></div></div>
                     </div>
                 </div>
@@ -1332,9 +1344,9 @@
                             <div class="info-item"><i class="fas fa-clock"></i><p>Mon–Sun: 11:00 AM – 9:00 PM</p></div>
                             <div class="location-card-actions">
                                 <!-- TODO: Replace # with actual links when available -->
-                                <a href="#" class="btn btn-primary">Order Online</a>
-                                <button class="btn btn-secondary reserve-button" data-location="ridgefield">Book a Table</button>
-                                <a href="#" class="btn btn-secondary">Gift Cards</a>
+                                <a href="#" class="btn btn-primary">Coming Soon!</a>
+                                <button class="btn btn-secondary reserve-button" data-location="ridgefield">Coming Soon!</button>
+                                <a href="#" class="btn btn-secondary">Coming Soon!</a>
                             </div>
                         </div>
                     </div>
@@ -1357,7 +1369,7 @@
                         <li>Freshly prepared dishes using authentic spices.</li>
                         <li>Professional service for a seamless experience.</li>
                     </ul>
-                    <button class="btn btn-primary" id="catering-inquiry-button">Inquire Now</button>
+                    <a href="https://www.ezcater.com/catering/pvt/zaiqa-indian-cuisine-3?aff" class="btn btn-primary">Preorder Now</a>
                 </div>
                 <div class="catering-image">
                     <img src="./assets/imgs/slider/thali.png" alt="A beautiful spread of Zaiqa's Indian catering dishes" />
@@ -1461,9 +1473,9 @@
                 <div class="modal-location-card">
                     <h4>Ridgefield, WA</h4>
                     <p>536 S Royle Rd Suite 7, Ridgefield, WA 98642</p>
-                    <a href="#" class="btn btn-primary">Order Online</a>
-                    <button class="btn btn-secondary reserve-button" data-location="ridgefield">Book a Table</button>
-                    <a href="#" class="btn btn-secondary">Gift Cards</a>
+                    <a href="#" class="btn btn-primary">Coming Soon!</a>
+                    <button class="btn btn-secondary reserve-button" data-location="ridgefield">Coming Soon!</button>
+                    <a href="#" class="btn btn-secondary">Coming Soon!</a>
                 </div>
             </div>
         </div>
@@ -1489,31 +1501,6 @@
         </div>
     </div>
     
-    <!-- Catering Inquiry Modal -->
-    <div class="modal-overlay" id="catering-modal">
-        <div class="modal-container">
-            <span class="modal-close" id="catering-modal-close">&times;</span>
-            <h3>Catering Inquiry</h3>
-            <p>To inquire, call <a href="tel:503-236-0714">(503)-236-0714</a> or fill out the form below.</p>
-            <form name="catering-inquiry" method="POST" data-netlify="true">
-                <input type="hidden" name="form-name" value="catering-inquiry" />
-                <div class="catering-form-grid">
-                    <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" required></div>
-                    <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" required></div>
-                    <div class="form-group full-width"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
-                    <div class="form-group"><label for="event-type">Type of Event</label><input type="text" id="event-type" name="event-type"></div>
-                    <div class="form-group"><label for="event-location">Event Location/Address</label><input type="text" id="event-location" name="event-location"></div>
-                    <div class="form-group"><label for="event-date">Date of Event</label><input type="date" id="event-date" name="event-date"></div>
-                    <div class="form-group"><label for="guest-count"># of Guests</label><input type="number" id="guest-count" name="guest-count" min="1"></div>
-                    <div class="form-group full-width"><label for="budget">Total Budget Range (Per Person)</label><input type="text" id="budget" name="budget"></div>
-                    <div class="form-group full-width"><label for="requests">Description / Requests (optional)</label><textarea id="requests" name="requests"></textarea></div>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit Inquiry</button>
-            </form>
-             <div id="catering-form-status"></div>
-        </div>
-    </div>
-
     <!-- Image Lightbox Modal -->
     <div class="modal-overlay" id="image-lightbox-modal">
         <span class="modal-close" id="image-lightbox-close">&times;</span>
@@ -1551,7 +1538,7 @@
 
         // --- FADING WORD EFFECT ---
         const fadingWordContainer = document.getElementById('fading-word-container');
-        const words = ['Zaiqa', 'India', 'Asia', 'the World'];
+        const words = ['Zaiqa', 'India', 'Asia', 'Tandoor'];
         let wordIndex = 0;
 
         setInterval(() => {
@@ -1600,11 +1587,6 @@
         const socialLocationsGrid = document.getElementById('social-locations-grid');
         const socialModalTitle = document.getElementById('social-modal-title');
         
-        const cateringModal = document.getElementById('catering-modal');
-        const openCateringButton = document.getElementById('catering-inquiry-button');
-        const closeCateringButton = document.getElementById('catering-modal-close');
-        const cateringForm = document.querySelector('form[name="catering-inquiry"]');
-        
         const imageLightboxModal = document.getElementById('image-lightbox-modal');
         const lightboxImage = document.getElementById('lightbox-image');
         const closeLightboxButton = document.getElementById('image-lightbox-close');
@@ -1634,7 +1616,6 @@
         setupModal(actionModal, openModalButtons, closeModalButton);
         setupModal(socialModal, [], socialModalClose);
         setupModal(reservationModal, [], closeReservationButton);
-        setupModal(cateringModal, [openCateringButton], closeCateringButton);
         setupModal(imageLightboxModal, [], closeLightboxButton);
         
         // Social Modal Specific Logic
@@ -1667,37 +1648,6 @@
                 }
             });
         });
-        
-        // Netlify Catering Form Submission
-        const handleSubmit = (event) => {
-            event.preventDefault();
-            const myForm = event.target;
-            const formData = new FormData(myForm);
-            const statusMessage = document.getElementById('catering-form-status');
-            
-            fetch("/", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(formData).toString(),
-            })
-            .then(() => {
-                statusMessage.textContent = "Thank you! Your inquiry has been sent.";
-                statusMessage.className = 'success';
-                myForm.reset();
-                setTimeout(() => {
-                    cateringModal.classList.remove('active');
-                    statusMessage.className = '';
-                    statusMessage.textContent = '';
-                }, 3000);
-            })
-            .catch((error) => {
-                statusMessage.textContent = "Sorry, there was an error. Please try again.";
-                statusMessage.className = 'error';
-                console.error(error);
-            });
-        };
-
-        cateringForm.addEventListener("submit", handleSubmit);
 
         // Image Lightbox Logic
         menuImages.forEach(img => {
