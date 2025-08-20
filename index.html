@@ -25,7 +25,7 @@
       "@context": "https://schema.org",
       "@type": "Restaurant",
       "name": "Zaiqa",
-      "image": "assets/imgs/slider/thali.png",
+      "image": "https://www.zaiqapdx.com/assets/imgs/slider/thali.png",
       "description": "Family-owned Indian-Pakistani restaurant serving authentic halal dishes made with fresh, high-quality ingredients and bold, aromatic spices across the Portland area.",
       "telephone": "+1-971-470-3104",
       "servesCuisine": ["Indian", "Pakistani", "Halal"],
@@ -167,7 +167,7 @@
             transition: all 0.3s ease;
             cursor: pointer;
             border: none;
-            text-align: center; /* Center text within buttons */
+            text-align: center;
         }
 
         .btn-primary {
@@ -175,7 +175,7 @@
             color: var(--text-light);
         }
         .btn-primary:hover {
-            background-color: #e67e33; /* Darker shade for hover */
+            background-color: #e67e33;
             transform: translateY(-3px);
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
@@ -200,6 +200,9 @@
             font-weight: 500;
             overflow: hidden;
             white-space: nowrap;
+        }
+        .announcement-bar:hover .scrolling-text {
+            animation-play-state: paused;
         }
         .scrolling-text {
             display: inline-block;
@@ -272,7 +275,6 @@
             align-items: center;
             gap: 20px;
         }
-        /* Mobile Nav */
         .mobile-nav-toggle { display: none; }
 
 
@@ -337,7 +339,7 @@
         #fading-word-container {
             transition: opacity 0.5s ease-in-out;
             display: inline-block;
-            min-width: 220px; /* Adjust based on the longest word to prevent layout shift */
+            min-width: 220px;
             text-align: left;
         }
 
@@ -521,7 +523,7 @@
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            text-align: center; /* Center align content */
+            text-align: center;
         }
         .location-card h4 {
             color: var(--primary-color);
@@ -535,7 +537,7 @@
         .location-card .info-item {
             display: flex;
             align-items: center;
-            justify-content: center; /* Center icon and text */
+            justify-content: center;
             gap: 10px;
             margin-bottom: 8px;
         }
@@ -561,7 +563,7 @@
             width: 100%;
             height: 200px;
             border: none;
-            pointer-events: none; /* Makes the iframe not interactive, so the link works */
+            pointer-events: none;
         }
         .location-card .btn[disabled] {
             background-color: #ccc;
@@ -573,58 +575,7 @@
             transform: none;
             box-shadow: none;
         }
-
-
-        /* --- TESTIMONIALS SECTION --- */
-        .testimonials {
-            background: linear-gradient(rgba(26,26,26,0.9), rgba(26,26,26,0.9)), url('assets/imgs/most-reservation/most-reservation.png') no-repeat center center/cover;
-            color: var(--text-light);
-        }
-        .testimonials .section-title h2, .testimonials .section-title .subtitle {
-            color: var(--text-light);
-        }
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-        .testimonial-card {
-            text-align: center;
-            padding: 20px;
-        }
-        .testimonial-card .quote-icon {
-            font-size: 3rem;
-            color: var(--primary-color);
-            opacity: 0.5;
-        }
-        .testimonial-card p {
-            font-size: 1.1rem;
-            font-style: italic;
-            margin: 20px 0;
-            color: rgba(255,255,255,0.9);
-        }
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-        .testimonial-author img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: 3px solid var(--primary-color);
-        }
-        .author-info h5 {
-            margin-bottom: 0;
-            color: var(--text-light);
-            font-family: var(--font-body);
-        }
-        .author-info span {
-            font-size: 0.9rem;
-            color: var(--secondary-color);
-        }
-
+        
         /* --- CATERING SECTION --- */
         .catering-section {
             background-color: #fff;
@@ -657,13 +608,124 @@
             margin-bottom: 10px;
         }
         .catering-content ul li::before {
-            content: '\f00c'; /* Font Awesome check icon */
+            content: '\f00c';
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
             color: var(--primary-color);
             position: absolute;
             left: 0;
             top: 4px;
+        }
+
+        /* --- TESTIMONIALS SECTION (UPDATED) --- */
+        .testimonials {
+            background-color: var(--light-bg);
+        }
+        .testimonials .section-title h2 {
+            color: var(--text-dark);
+        }
+        .testimonials .section-title .subtitle {
+            color: var(--secondary-color);
+        }
+        .testimonial-slider-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            min-height: 300px;
+        }
+        .testimonial-slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .testimonial-card {
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            padding: 30px 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+            border-left: 5px solid var(--primary-color);
+            text-align: left;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+        }
+        .testimonial-card.active {
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+        }
+        .testimonial-card .quote-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            opacity: 0.4;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+        .testimonial-card p {
+            font-size: 1.05rem;
+            font-style: italic;
+            line-height: 1.7;
+            margin: 15px 0 25px;
+            color: var(--text-dark);
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 15px;
+        }
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid var(--secondary-color);
+        }
+        .author-info h5 {
+            margin-bottom: 0;
+            color: var(--text-dark);
+            font-family: var(--font-body);
+        }
+        .author-info span {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+        }
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        .slider-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            pointer-events: all;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+        .slider-btn:hover {
+            background-color: var(--primary-color);
+            transform: scale(1.1);
+        }
+        .slider-btn.prev {
+            margin-left: -60px;
+        }
+        .slider-btn.next {
+            margin-right: -60px;
         }
 
         /* --- FOOTER --- */
@@ -854,7 +916,7 @@
             margin-top: 15px;
             padding: 10px;
             border-radius: var(--border-radius);
-            display: none; /* Hidden by default */
+            display: none;
             text-align: center;
             font-weight: 500;
         }
@@ -902,7 +964,7 @@
             #fading-word-container {
                 min-width: unset;
                 text-align: center;
-                display: block; /* Make it a block to center it */
+                display: block;
             }
             .hero-content h1 {
                 display: flex;
@@ -914,7 +976,7 @@
             .main-nav {
                 display: none;
                 position: absolute;
-                top: 80px; /* Adjust based on header height */
+                top: 80px;
                 left: 0;
                 width: 100%;
                 background-color: var(--dark-bg);
@@ -975,6 +1037,43 @@
             .catering-container { gap: 30px; }
             .catering-form-grid { grid-template-columns: 1fr; }
 
+            /* MINIMIZE WHY CHOOSE US SECTION */
+            .choose-us-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .choose-us-item {
+                padding: 15px;
+            }
+            .choose-us-item .icon {
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+            .choose-us-item h4 {
+                font-size: 1rem;
+            }
+            .choose-us-item p {
+                font-size: 0.8rem;
+            }
+            
+            /* ADJUST TESTIMONIAL SLIDER ON MOBILE */
+            .slider-btn {
+                width: 35px;
+                height: 35px;
+            }
+            .slider-btn.prev {
+                margin-left: -15px;
+            }
+            .slider-btn.next {
+                margin-right: -15px;
+            }
+            .testimonial-card {
+                padding: 25px;
+            }
+            .testimonial-card p {
+                font-size: 0.95rem;
+            }
+
             /* Compact Mobile Footer */
             .main-footer { padding: 30px 0 0; }
             .footer-grid {
@@ -989,7 +1088,7 @@
                 width: 100%;
             }
             .footer-widget h4 {
-                display: none; /* Hide titles on mobile */
+                display: none;
             }
             .footer-widget ul {
                 display: flex;
@@ -1233,7 +1332,7 @@
 
                 <!-- Desserts -->
                 <div id="desserts" class="menu-content">
-                     <div class="menu-grid">
+                    <div class="menu-grid">
                         <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Gulab Jamun.png" alt="Gulab Jamun" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Gulab Jamun</h5><span class="price">$7.00</span></div><p>Fried semolina and milk donut balls, soaked in a sweet syrup, 3 pieces.</p></div></div>
                         <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Rasmalai.jpeg" alt="Rasmalai" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Rasmalai</h5><span class="price">$7.00</span></div><p>Cottage cheese dumplings soaked in sweet flavored milk, 2 pieces.</p></div></div>
                     </div>
@@ -1241,7 +1340,7 @@
 
                 <!-- Kids Menu -->
                 <div id="kids-menu" class="menu-content">
-                     <div class="menu-grid">
+                    <div class="menu-grid">
                         <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Fries.jpg" alt="Fries" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Fries</h5><span class="price">$5.00</span></div><p>Deep-fried shoestring french fries.</p></div></div>
                         <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Chicken Strips.png" alt="Chicken Strips" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Chicken Strips</h5><span class="price">$7.00</span></div><p>Deep-fried strips of breaded chicken.</p></div></div>
                     </div>
@@ -1249,7 +1348,7 @@
 
                 <!-- Sauces -->
                 <div id="sauces" class="menu-content">
-                     <div class="menu-grid">
+                    <div class="menu-grid">
                         <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Raita.png" alt="Raita" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Raita</h5><span class="price">$5.00</span></div><p>A creamy house-made yogurt sauce mixed with cucumber, onions, carrots, and spices.</p></div></div>
                         <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Mint Chutney.png" alt="Mint Chutney" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Mint Chutney</h5><span class="price">$3.00</span></div><p>A creamy house-made yogurt sauce mixed with mint and spices.</p></div></div>
                         <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Tamarind Sauce.jpg" alt="Tamarind Sauce" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Tamarind Sauce</h5><span class="price">$3.00</span></div><p>A tangy sweet and spicy sauce made with tamarind, ginger, and spices.</p></div></div>
@@ -1260,7 +1359,7 @@
                 
                 <!-- Beverages -->
                 <div id="beverages" class="menu-content">
-                     <div class="menu-grid">
+                    <div class="menu-grid">
                         <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Mango Lassi.png" alt="Mango Lassi" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Mango Lassi</h5><span class="price">$6.00</span></div><p>Mango purée, buttermilk, yogurt, and sugar.</p></div></div>
                         <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Sweet Lassi.png" alt="Sweet Lassi" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Sweet Lassi</h5><span class="price">$5.00</span></div><p>Buttermilk, yogurt, and sugar.</p></div></div>
                         <div class="menu-item"><img class="menu-item-img" src="./assets/imgs/menu/Salty Lassi.png" alt="Salty Lassi" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fdfaf3/ff9248?text=Zaiqa';"><div class="menu-item-details"><div class="menu-item-header"><h5>Salty Lassi</h5><span class="price">$5.00</span></div><p>Buttermilk, yogurt, and salt.</p></div></div>
@@ -1284,7 +1383,7 @@
                     <!-- Location 1: Portland (Lake Oswego) -->
                     <div class="location-card">
                         <a href="https://www.google.com/maps/dir/?api=1&destination=Zaiqa+Indian+Cuisine+-+Lake+Oswego" target="_blank" class="map-link">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125223.68475976317!2d-122.86693936089365!3d45.35696413227676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495731325691c1d%3A0x8d452feced3c8bc1!2sZaiqa%20Indian%20Cuisine%20-%20Lake%20Oswego!5e1!3m2!1sen!2sus!4v1755053287149!5m2!1sen!2sus" loading="lazy"></iframe>
+                            <iframe title="Map to Zaiqa Lake Oswego" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125223.68475976317!2d-122.86693936089365!3d45.35696413227676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495731325691c1d%3A0x8d452feced3c8bc1!2sZaiqa%20Indian%20Cuisine%20-%20Lake%20Oswego!5e1!3m2!1sen!2sus!4v1755053287149!5m2!1sen!2sus" loading="lazy"></iframe>
                         </a>
                         <div class="location-card-content">
                             <h4>Lake Oswego</h4>
@@ -1301,7 +1400,7 @@
                     <!-- Location 2: Wilsonville -->
                     <div class="location-card">
                         <a href="https://www.google.com/maps/dir/?api=1&destination=Zaiqa+Indian+Cuisine+-+Wilsonville" target="_blank" class="map-link">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d692.341865526609!2d-122.76296518818535!3d45.3101393425939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54956fba7c57eff1%3A0x65d1172f69a01af8!2sZaiqa%20Indian%20Cuisine%20-%20Wilsonville!5e1!3m2!1sen!2sus!4v1755053262102!5m2!1sen!2sus" loading="lazy"></iframe>
+                            <iframe title="Map to Zaiqa Wilsonville" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d692.341865526609!2d-122.76296518818535!3d45.3101393425939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54956fba7c57eff1%3A0x65d1172f69a01af8!2sZaiqa%20Indian%20Cuisine%20-%20Wilsonville!5e1!3m2!1sen!2sus!4v1755053262102!5m2!1sen!2sus" loading="lazy"></iframe>
                         </a>
                         <div class="location-card-content">
                             <h4>Wilsonville</h4>
@@ -1318,7 +1417,7 @@
                     <!-- Location 3: South Waterfront -->
                     <div class="location-card">
                         <a href="https://www.google.com/maps/dir/?api=1&destination=Zaiqa+Indian+Cuisine+-+South+Waterfront" target="_blank" class="map-link">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44171.425690096825!2d-122.7260243432147!3d45.486972273361474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950bf5f0817967%3A0xa81a8bd01b3572c8!2sZaiqa%20Indian%20Cuisine%20-%20South%20Waterfront!5e1!3m2!1sen!2sus!4v1755053300687!5m2!1sen!2sus" loading="lazy"></iframe>
+                            <iframe title="Map to Zaiqa South Waterfront" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44171.425690096825!2d-122.7260243432147!3d45.486972273361474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950bf5f0817967%3A0xa81a8bd01b3572c8!2sZaiqa%20Indian%20Cuisine%20-%20South%20Waterfront!5e1!3m2!1sen!2sus!4v1755053300687!5m2!1sen!2sus" loading="lazy"></iframe>
                         </a>
                         <div class="location-card-content">
                             <h4>South Waterfront</h4>
@@ -1335,7 +1434,7 @@
                     <!-- Location 4: Ridgefield -->
                     <div class="location-card">
                         <a href="https://www.google.com/maps/dir/?api=1&destination=536+S+Royle+Rd+Suite+7,+Ridgefield,+WA+98642" target="_blank" class="map-link">
-                            <iframe src="https://maps.google.com/maps?q=536+S+Royle+Rd+Suite+7,+Ridgefield,+WA+98642&z=14&output=embed" loading="lazy"></iframe>
+                            <iframe title="Map to Zaiqa Ridgefield" src="https://maps.google.com/maps?q=536+S+Royle+Rd+Suite+7,+Ridgefield,+WA+98642&z=14&output=embed" loading="lazy"></iframe>
                         </a>
                         <div class="location-card-content">
                             <h4>Ridgefield, WA</h4>
@@ -1343,7 +1442,6 @@
                             <div class="info-item"><i class="fas fa-phone"></i><p><a href="tel:15551234567">(555) 123-4567</a></p></div>
                             <div class="info-item"><i class="fas fa-clock"></i><p>Mon–Sun: 11:00 AM – 9:00 PM</p></div>
                             <div class="location-card-actions">
-                                <!-- TODO: Replace # with actual links when available -->
                                 <a href="#" class="btn btn-primary">Coming Soon!</a>
                                 <button class="btn btn-secondary reserve-button" data-location="ridgefield">Coming Soon!</button>
                                 <a href="#" class="btn btn-secondary">Coming Soon!</a>
@@ -1384,18 +1482,48 @@
                     <span class="subtitle">Customer Feedback</span>
                     <h2>What Our Guests Say</h2>
                 </div>
-                <!-- You can use a library like Swiper.js for the slider -->
-                <div class="testimonial-slider">
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p>Zaiqa never fails to impress! The biryani was packed with flavor, the naan was perfectly soft, and the butter chicken melted in my mouth. Truly an authentic taste of home with world-class service.</p>
-                        <div class="testimonial-author">
-                            <img src="./assets/imgs/client-feedback/1.png" alt="Aarav Malhotra, a happy customer at Zaiqa">
-                            <div class="author-info">
-                                <h5>Aarav Malhotra</h5>
-                                <span>Food Blogger</span>
+                <div class="testimonial-slider-container">
+                    <div class="testimonial-slider" id="testimonial-slider">
+                        <!-- Slide 1 -->
+                        <div class="testimonial-card active">
+                            <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                            <p>Zaiqa never fails to impress! The biryani was packed with flavor, the naan was perfectly soft, and the butter chicken melted in my mouth. Truly an authentic taste of home with world-class service.</p>
+                            <div class="testimonial-author">
+                                <img src="./assets/imgs/client-feedback/1.png" alt="Aarav Malhotra, a happy customer at Zaiqa">
+                                <div class="author-info">
+                                    <h5>Aarav Malhotra</h5>
+                                    <span>Food Blogger</span>
+                                </div>
                             </div>
                         </div>
+                        <!-- Slide 2 -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                            <p>What a treat! SUCH good Indian food. Authentic Indian cuisine, with light, crispy pastry in the samosas, delicately spiced sauces with an excellent balance of richness, sourness, and spiciness. Perfectly pillowy and fluffy Malai Kofta and a fragrant, delicious butter chicken.</p>
+                            <div class="testimonial-author">
+                                <img src="./assets/imgs/client-feedback/2.png" alt="Jessica Chen, a happy customer">
+                                <div class="author-info">
+                                    <h5>David Cross</h5>
+                                    <span>Google Review</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                            <p>Been here quite a few times now, and each time has been absolutely fantastic. The food is delicious and the service has always been wonderful. Also, on a very important personal note. I have Celiacs, so finding a restaurant with so many amazing food options that I can enjoy in one place is a huge plus for me. I can't recommend this place enough 👍.</p>
+                            <div class="testimonial-author">
+                                <img src="./assets/imgs/client-feedback/3.png" alt="David Miller, a happy customer">
+                                <div class="author-info">
+                                    <h5>Arthur Franco</h5>
+                                    <span>Local Resident</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <button class="slider-btn prev" id="prev-testimonial" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next" id="next-testimonial" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </div>
             </div>
@@ -1434,7 +1562,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Zaiqa Restaurants. All Rights Reserved. Managed by <a href="https://www.seatechconsulting.com" target="_blank">Seatech Consulting Group</a>.</p>
+                <p>&copy; <span id="current-year">2025</span> Zaiqa Restaurants. All Rights Reserved. Managed by <a href="https://www.seatechconsulting.com" target="_blank">Seatech Consulting Group</a>.</p>
             </div>
         </div>
     </footer>
@@ -1521,135 +1649,137 @@
         ];
         let currentImageIndex = 0;
 
-        images.forEach((src, index) => {
-            const slide = document.createElement('div');
-            slide.className = 'slide';
-            slide.style.backgroundImage = `url(${src})`;
-            if (index === 0) slide.classList.add('active');
-            sliderContainer.appendChild(slide);
-        });
+        if (sliderContainer) {
+            images.forEach((src, index) => {
+                const slide = document.createElement('div');
+                slide.className = 'slide';
+                slide.style.backgroundImage = `url(${src})`;
+                if (index === 0) slide.classList.add('active');
+                sliderContainer.appendChild(slide);
+            });
 
-        const slides = document.querySelectorAll('.slide');
-        setInterval(() => {
-            slides[currentImageIndex].classList.remove('active');
-            currentImageIndex = (currentImageIndex + 1) % slides.length;
-            slides[currentImageIndex].classList.add('active');
-        }, 5000);
+            const slides = document.querySelectorAll('#hero-slider .slide');
+            if (slides.length > 1) {
+                setInterval(() => {
+                    slides[currentImageIndex].classList.remove('active');
+                    currentImageIndex = (currentImageIndex + 1) % slides.length;
+                    slides[currentImageIndex].classList.add('active');
+                }, 5000);
+            }
+        }
+        
+        // --- FOOTER YEAR ---
+        const yearSpan = document.getElementById('current-year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
 
         // --- FADING WORD EFFECT ---
         const fadingWordContainer = document.getElementById('fading-word-container');
-        const words = ['Zaiqa', 'India', 'Asia', 'Tandoor'];
-        let wordIndex = 0;
+        if (fadingWordContainer) {
+            const words = ['Zaiqa', 'India', 'Asia', 'Tandoor'];
+            let wordIndex = 0;
 
-        setInterval(() => {
-            fadingWordContainer.style.opacity = 0; // Fade out
-            setTimeout(() => {
-                wordIndex = (wordIndex + 1) % words.length;
-                fadingWordContainer.textContent = words[wordIndex];
-                fadingWordContainer.style.opacity = 1; // Fade in
-            }, 500); // This timeout should match the CSS transition duration
-        }, 3000); // Change word every 3 seconds
+            setInterval(() => {
+                fadingWordContainer.style.opacity = 0;
+                setTimeout(() => {
+                    wordIndex = (wordIndex + 1) % words.length;
+                    fadingWordContainer.textContent = words[wordIndex];
+                    fadingWordContainer.style.opacity = 1;
+                }, 500);
+            }, 3000);
+        }
 
         // --- MOBILE NAVIGATION ---
         const mobileNavToggle = document.getElementById('mobile-nav-toggle');
         const mainNav = document.getElementById('main-nav');
-        mobileNavToggle.addEventListener('click', () => mainNav.classList.toggle('active'));
-        mainNav.addEventListener('click', (e) => {
-            if (e.target.tagName === 'A') mainNav.classList.remove('active');
-        });
+        if (mobileNavToggle && mainNav) {
+            mobileNavToggle.addEventListener('click', () => mainNav.classList.toggle('active'));
+            mainNav.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') mainNav.classList.remove('active');
+            });
+        }
 
         // --- MENU TABS LOGIC ---
         const menuTabsContainer = document.getElementById('menu-tabs');
-        const menuContents = document.querySelectorAll('.menu-content');
-        menuTabsContainer.addEventListener('click', (e) => {
-            if (e.target.tagName === 'BUTTON') {
-                menuTabsContainer.querySelector('.active').classList.remove('active');
-                e.target.classList.add('active');
-                menuContents.forEach(content => {
-                    content.classList.toggle('active', content.id === e.target.dataset.target);
-                });
-            }
-        });
+        if (menuTabsContainer) {
+            const menuContents = document.querySelectorAll('.menu-content');
+            menuTabsContainer.addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON') {
+                    menuTabsContainer.querySelector('.active').classList.remove('active');
+                    e.target.classList.add('active');
+                    menuContents.forEach(content => {
+                        content.classList.toggle('active', content.id === e.target.dataset.target);
+                    });
+                }
+            });
+        }
 
         // --- MODAL LOGIC ---
-        const actionModal = document.getElementById('action-modal');
-        const openModalButtons = document.querySelectorAll('.action-button');
-        const closeModalButton = document.getElementById('action-modal-close');
-        
-        const reservationModal = document.getElementById('reservation-modal');
-        const openReservationButtons = document.querySelectorAll('.reserve-button');
-        const closeReservationButton = document.getElementById('reservation-modal-close');
-        const iframeContainer = document.getElementById('reservationIframeContainer');
-        
-        const socialModal = document.getElementById('social-modal');
-        const socialModalClose = document.getElementById('social-modal-close');
-        const socialLinkTriggers = document.querySelectorAll('.social-link-trigger');
-        const socialLocationsGrid = document.getElementById('social-locations-grid');
-        const socialModalTitle = document.getElementById('social-modal-title');
-        
-        const imageLightboxModal = document.getElementById('image-lightbox-modal');
-        const lightboxImage = document.getElementById('lightbox-image');
-        const closeLightboxButton = document.getElementById('image-lightbox-close');
-        const menuImages = document.querySelectorAll('.menu-item-img');
-
-        const socialLinks = {
-            'lake-oswego': { facebook: 'https://www.facebook.com/zaiqapdx', instagram: 'https://www.instagram.com/zaiqapdx/', tiktok: 'https://www.tiktok.com/@zaiqapdx', yelp: 'https://www.yelp.com/biz/zaiqa-indian-cuisine-lake-oswego' },
-            'wilsonville': { facebook: 'https://www.facebook.com/zaiqapdx', instagram: 'https://www.instagram.com/zaiqapdx/', tiktok: 'https://www.tiktok.com/@zaiqapdx', yelp: 'https://www.yelp.com/biz/zaiqa-indian-cuisine-wilsonville-3' },
-            'south-waterfront': { facebook: 'https://www.facebook.com/zaiqapdx', instagram: 'https://www.instagram.com/zaiqapdx/', tiktok: 'https://www.tiktok.com/@zaiqapdx', yelp: 'https://www.yelp.com/biz/zaiqa-indian-cuisine-south-waterfront-portland' },
-            'ridgefield': { facebook: '#', instagram: '#', tiktok: '#', yelp: '#' } // Placeholder links
-        };
-        
-        const iframeSources = {
-            "lake-oswego": "https://eatapp.co/reserve/zaiqa-indian-cuisine-lake-oswego-15158-bangy-road?source=iframe",
-            "wilsonville": "https://eatapp.co/reserve/zaiqa-indian-cuisine-wilsonville-200-29030-southwest-town-center-loop-east?source=iframe",
-            "south-waterfront": "https://eatapp.co/reserve/zaiqa-indian-cuisine-south-waterfront-3682-south-bond-avenue?source=iframe",
-            "ridgefield": "#" // Placeholder
-        };
-
-        // Generic Modal Handlers
         const setupModal = (modal, openTriggers, closeTrigger) => {
+            if (!modal || !closeTrigger) return;
             openTriggers.forEach(trigger => trigger.addEventListener('click', (e) => { e.preventDefault(); modal.classList.add('active'); }));
             closeTrigger.addEventListener('click', () => modal.classList.remove('active'));
             modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
         };
 
-        setupModal(actionModal, openModalButtons, closeModalButton);
-        setupModal(socialModal, [], socialModalClose);
-        setupModal(reservationModal, [], closeReservationButton);
-        setupModal(imageLightboxModal, [], closeLightboxButton);
+        const actionModal = document.getElementById('action-modal');
+        const socialModal = document.getElementById('social-modal');
+        const reservationModal = document.getElementById('reservation-modal');
+        const imageLightboxModal = document.getElementById('image-lightbox-modal');
+        
+        setupModal(actionModal, document.querySelectorAll('.action-button'), document.getElementById('action-modal-close'));
+        setupModal(socialModal, [], document.getElementById('social-modal-close'));
+        setupModal(reservationModal, [], document.getElementById('reservation-modal-close'));
+        setupModal(imageLightboxModal, [], document.getElementById('image-lightbox-close'));
         
         // Social Modal Specific Logic
+        const socialLinkTriggers = document.querySelectorAll('.social-link-trigger');
+        const socialModalTitle = document.getElementById('social-modal-title');
+        const socialLocationsGrid = document.getElementById('social-locations-grid');
+        const socialLinks = {
+            'lake-oswego': { facebook: 'https://www.facebook.com/zaiqapdx', instagram: 'https://www.instagram.com/zaiqapdx/', tiktok: 'https://www.tiktok.com/@zaiqapdx', yelp: 'https://www.yelp.com/biz/zaiqa-indian-cuisine-lake-oswego' },
+            'wilsonville': { facebook: 'https://www.facebook.com/zaiqapdx', instagram: 'https://www.instagram.com/zaiqapdx/', tiktok: 'https://www.tiktok.com/@zaiqapdx', yelp: 'https://www.yelp.com/biz/zaiqa-indian-cuisine-wilsonville-3' },
+            'south-waterfront': { facebook: 'https://www.facebook.com/zaiqapdx', instagram: 'https://www.instagram.com/zaiqapdx/', tiktok: 'https://www.tiktok.com/@zaiqapdx', yelp: 'https://www.yelp.com/biz/zaiqa-indian-cuisine-south-waterfront-portland' },
+            'ridgefield': { facebook: '#', instagram: '#', tiktok: '#', yelp: '#' }
+        };
         socialLinkTriggers.forEach(trigger => {
             trigger.addEventListener('click', e => {
                 e.preventDefault();
                 const socialPlatform = trigger.dataset.social;
                 socialModalTitle.textContent = `Choose a location for ${socialPlatform}`;
-                socialLocationsGrid.innerHTML = `
-                    <a href="${socialLinks['lake-oswego'][socialPlatform]}" target="_blank" class="btn btn-primary">Lake Oswego</a>
-                    <a href="${socialLinks['wilsonville'][socialPlatform]}" target="_blank" class="btn btn-primary">Wilsonville</a>
-                    <a href="${socialLinks['south-waterfront'][socialPlatform]}" target="_blank" class="btn btn-primary">South Waterfront</a>
-                    <a href="${socialLinks['ridgefield'][socialPlatform]}" target="_blank" class="btn btn-primary">Ridgefield</a>
-                `;
+                socialLocationsGrid.innerHTML = Object.keys(socialLinks).map(loc => 
+                    `<a href="${socialLinks[loc][socialPlatform]}" target="_blank" class="btn btn-primary">${loc.replace('-', ' ')}</a>`
+                ).join('');
                 socialModal.classList.add('active');
             });
         });
 
         // Reservation Modal Specific Logic
+        const openReservationButtons = document.querySelectorAll('.reserve-button');
+        const iframeContainer = document.getElementById('reservationIframeContainer');
+        const iframeSources = {
+            "lake-oswego": "https://eatapp.co/reserve/zaiqa-indian-cuisine-lake-oswego-15158-bangy-road?source=iframe",
+            "wilsonville": "https://eatapp.co/reserve/zaiqa-indian-cuisine-wilsonville-200-29030-southwest-town-center-loop-east?source=iframe",
+            "south-waterfront": "https://eatapp.co/reserve/zaiqa-indian-cuisine-south-waterfront-3682-south-bond-avenue?source=iframe",
+            "ridgefield": ""
+        };
         openReservationButtons.forEach(button => {
             button.addEventListener('click', (e) => {
                 const locationKey = e.target.dataset.location;
-                if (iframeSources[locationKey] && iframeSources[locationKey] !== '#') {
+                if (iframeSources[locationKey]) {
                     iframeContainer.innerHTML = `<iframe title="Reservation Widget" frameborder="0" src="${iframeSources[locationKey]}"></iframe>`;
-                    actionModal.classList.remove('active');
+                    if(actionModal) actionModal.classList.remove('active');
                     reservationModal.classList.add('active');
                 } else {
-                    // Fallback for Ridgefield or if link is missing
                     alert('Online reservations for this location are coming soon!');
                 }
             });
         });
 
         // Image Lightbox Logic
+        const menuImages = document.querySelectorAll('.menu-item-img');
+        const lightboxImage = document.getElementById('lightbox-image');
         menuImages.forEach(img => {
             img.addEventListener('click', () => {
                 lightboxImage.src = img.src;
@@ -1657,6 +1787,52 @@
             });
         });
 
+        // --- TESTIMONIAL SLIDER ---
+        const testimonialSlides = document.querySelectorAll('#testimonial-slider .testimonial-card');
+        const prevTestimonialBtn = document.getElementById('prev-testimonial');
+        const nextTestimonialBtn = document.getElementById('next-testimonial');
+        if (testimonialSlides.length > 1) {
+            let currentTestimonial = 0;
+            let testimonialInterval;
+
+            const showTestimonial = (index) => {
+                testimonialSlides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+            };
+
+            const nextTestimonial = () => {
+                currentTestimonial = (currentTestimonial + 1) % testimonialSlides.length;
+                showTestimonial(currentTestimonial);
+            };
+
+            const prevTestimonial = () => {
+                currentTestimonial = (currentTestimonial - 1 + testimonialSlides.length) % testimonialSlides.length;
+                showTestimonial(currentTestimonial);
+            };
+
+            const startTestimonialSlider = () => {
+                testimonialInterval = setInterval(nextTestimonial, 7000);
+            };
+
+            const resetTestimonialInterval = () => {
+                clearInterval(testimonialInterval);
+                startTestimonialSlider();
+            };
+
+            nextTestimonialBtn.addEventListener('click', () => {
+                nextTestimonial();
+                resetTestimonialInterval();
+            });
+
+            prevTestimonialBtn.addEventListener('click', () => {
+                prevTestimonial();
+                resetTestimonialInterval();
+            });
+
+            showTestimonial(0);
+            startTestimonialSlider();
+        }
     });
     </script>
 </body>
