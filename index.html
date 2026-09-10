@@ -12,10 +12,16 @@
 
         gtag('config', 'AW-17298799810');
     </script>
-    <title>Zaiqa | Authentic Indian Restaurant in Portland, Lake Oswego & Wilsonville</title>
-    <meta name="description" content="Discover Zaiqa, the best authentic Indian and Pakistani restaurant serving Portland, Lake Oswego, Wilsonville, and Ridgefield. Enjoy fresh, halal dishes like biryani, tandoori, and curry. Order online or book a table today!" />
-    <meta name="keywords" content="indian restaurant portland, indian food portland, best indian food lake oswego, halal restaurant wilsonville, zaiqa, authentic indian cuisine, pakistani food, biryani, tandoori, curry, vegan indian food portland, indian food ridgefield" />
+    <title>Zaiqa Indian Cuisine | Portland, Lake Oswego &amp; Ridgefield</title>
+    <meta name="description" content="Enjoy authentic Indian and Pakistani halal cuisine at Zaiqa in Portland, Lake Oswego, and Ridgefield, WA. View locations, order online, or buy gift cards." />
+    <meta name="keywords" content="indian restaurant portland, indian food portland, best indian food lake oswego, halal restaurant ridgefield, zaiqa, authentic indian cuisine, pakistani food, biryani, tandoori, curry, vegan indian food portland, indian food ridgefield" />
     <meta name="author" content="Seatech Consulting Group" />
+    <link rel="canonical" href="https://www.zaiqapdx.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Zaiqa Indian Cuisine | Portland, Lake Oswego &amp; Ridgefield" />
+    <meta property="og:description" content="Authentic Indian and Pakistani halal cuisine in Portland, Lake Oswego, and Ridgefield, WA." />
+    <meta property="og:url" content="https://www.zaiqapdx.com/" />
+    <meta property="og:image" content="https://www.zaiqapdx.com/assets/imgs/slider/thali.png" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/favicon.png" />
@@ -32,48 +38,81 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "Zaiqa",
-      "image": "https://www.zaiqapdx.com/assets/imgs/slider/thali.png",
-      "description": "Family-owned Indian-Pakistani restaurant serving authentic halal dishes made with fresh, high-quality ingredients and bold, aromatic spices across the Portland area.",
-      "telephone": "+1-971-470-3104",
-      "servesCuisine": ["Indian", "Pakistani", "Halal"],
-      "priceRange": "$$",
-      "hasMenu": "#menu",
-      "acceptsReservations": "True",
-      "url": "https://www.zaiqapdx.com",
-      "address": [
+      "@graph": [
         {
-          "@type": "PostalAddress",
-          "streetAddress": "15158 Bangy Road",
-          "addressLocality": "Lake Oswego",
-          "addressRegion": "OR",
-          "postalCode": "97035",
-          "addressCountry": "US"
+          "@type": "Restaurant",
+          "@id": "https://www.zaiqapdx.com/#lake-oswego",
+          "name": "Zaiqa Indian Cuisine - Lake Oswego",
+          "image": "https://www.zaiqapdx.com/assets/imgs/slider/thali.png",
+          "description": "Family-owned Indian-Pakistani restaurant serving authentic halal dishes made with fresh, high-quality ingredients and bold, aromatic spices.",
+          "telephone": "+1-971-470-3104",
+          "servesCuisine": ["Indian", "Pakistani", "Halal"],
+          "priceRange": "$$",
+          "hasMenu": "https://www.zaiqapdx.com/#menu",
+          "acceptsReservations": true,
+          "url": "https://www.zaiqapdx.com/#locations",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "15158 Bangy Road",
+            "addressLocality": "Lake Oswego",
+            "addressRegion": "OR",
+            "postalCode": "97035",
+            "addressCountry": "US"
+          },
+          "openingHours": "Mo-Su 11:00-21:00"
         },
         {
-          "@type": "PostalAddress",
-          "streetAddress": "29030 SW Town Center Loop E #200",
-          "addressLocality": "Wilsonville",
-          "addressRegion": "OR",
-          "postalCode": "97070",
-          "addressCountry": "US"
+          "@type": "Restaurant",
+          "@id": "https://www.zaiqapdx.com/#south-waterfront",
+          "name": "Zaiqa Indian Cuisine - South Waterfront",
+          "image": "https://www.zaiqapdx.com/assets/imgs/slider/thali.png",
+          "description": "Family-owned Indian-Pakistani restaurant serving authentic halal dishes made with fresh, high-quality ingredients and bold, aromatic spices.",
+          "telephone": "+1-971-754-4913",
+          "servesCuisine": ["Indian", "Pakistani", "Halal"],
+          "priceRange": "$$",
+          "hasMenu": "https://www.zaiqapdx.com/#menu",
+          "acceptsReservations": true,
+          "url": "https://www.zaiqapdx.com/#locations",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "3682 South Bond Avenue",
+            "addressLocality": "Portland",
+            "addressRegion": "OR",
+            "postalCode": "97239",
+            "addressCountry": "US"
+          },
+          "openingHours": "Mo-Su 11:00-21:00"
         },
         {
-          "@type": "PostalAddress",
-          "streetAddress": "3682 South Bond Avenue",
-          "addressLocality": "Portland",
-          "addressRegion": "OR",
-          "postalCode": "97239",
-          "addressCountry": "US"
-        },
-        {
-          "@type": "PostalAddress",
-          "streetAddress": "536 S Royle Rd Suite 7",
-          "addressLocality": "Ridgefield",
-          "addressRegion": "WA",
-          "postalCode": "98642",
-          "addressCountry": "US"
+          "@type": "Restaurant",
+          "@id": "https://www.zaiqapdx.com/#ridgefield",
+          "name": "Zaiqa Indian Cuisine - Ridgefield",
+          "image": "https://www.zaiqapdx.com/assets/imgs/slider/thali.png",
+          "description": "Zaiqa Ridgefield serves authentic Indian and Pakistani halal cuisine in Ridgefield, Washington.",
+          "telephone": "+1-503-548-3877",
+          "servesCuisine": ["Indian", "Pakistani", "Halal"],
+          "priceRange": "$$",
+          "hasMenu": "https://www.zaiqapdx.com/#menu",
+          "url": "https://www.zaiqapdx.com/#locations",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "536 South Royle Road, Suite 145",
+            "addressLocality": "Ridgefield",
+            "addressRegion": "WA",
+            "postalCode": "98642",
+            "addressCountry": "US"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "11:00",
+            "closes": "21:00",
+            "validFrom": "2026-09-11"
+          },
+          "potentialAction": {
+            "@type": "OrderAction",
+            "target": "https://order.toasttab.com/online/zaiqawa"
+          }
         }
       ]
     }
@@ -502,6 +541,28 @@
             display: flex;
             flex-direction: column;
         }
+        .location-card-new {
+            position: relative;
+            border: 2px solid rgba(255,146,72,0.7);
+            box-shadow: 0 8px 26px rgba(255,146,72,0.18);
+        }
+        .location-badge {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            z-index: 2;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background-color: var(--primary-color);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            line-height: 1;
+            text-transform: uppercase;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+            pointer-events: none;
+        }
         .location-card .map-link {
             display: block;
             position: relative;
@@ -854,6 +915,79 @@
             box-shadow: none;
         }
 
+        /* Grand Opening Announcement */
+        #grand-opening-modal {
+            z-index: 1100;
+        }
+        .grand-opening-modal-container {
+            max-width: 620px;
+            padding: 55px 45px 45px;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at top right, rgba(255,146,72,0.2), transparent 42%),
+                var(--light-bg);
+            border-top: 6px solid var(--primary-color);
+        }
+        .grand-opening-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 18px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: #fff;
+            font-size: 1.8rem;
+            box-shadow: 0 8px 24px rgba(255,146,72,0.3);
+        }
+        .grand-opening-eyebrow {
+            margin-bottom: 8px;
+            color: var(--secondary-color);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .grand-opening-modal-container h2 {
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+        .grand-opening-date {
+            display: block;
+            margin-bottom: 16px;
+            color: var(--primary-color);
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 700;
+        }
+        .grand-opening-address {
+            margin-bottom: 24px;
+            color: #555;
+        }
+        .grand-opening-address a {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        .grand-opening-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .grand-opening-actions .btn {
+            min-width: 180px;
+        }
+        button.modal-close {
+            padding: 2px 6px;
+            border: 0;
+            border-radius: 4px;
+            background: transparent;
+        }
+        button.modal-close:focus-visible {
+            outline: 3px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
         /* Reservation Iframe Modal Styling */
         #reservation-modal-container {
             max-width: 550px;
@@ -1045,6 +1179,10 @@
             .location-card-content { padding: 20px; }
             .catering-container { gap: 30px; }
             .catering-form-grid { grid-template-columns: 1fr; }
+            .grand-opening-modal-container { padding: 48px 22px 30px; }
+            .grand-opening-modal-container h2 { font-size: 2rem; }
+            .grand-opening-actions { flex-direction: column; }
+            .grand-opening-actions .btn { width: 100%; }
 
             /* MINIMIZE WHY CHOOSE US SECTION */
             .choose-us-grid {
@@ -1121,14 +1259,12 @@
         <div class="scrolling-text">
             <span class="quote">“At Zaiqa, every bite tells a story—of tradition, taste, and togetherness.”</span>
             <span>📍 Lake Oswego</span>
-            <span>📍 Wilsonville</span>
             <span>📍 South Waterfront</span>
-            <span>📍 Ridgefield (Coming Soon)</span>
+            <span>📍 Ridgefield — Opening Friday, September 11</span>
             <span class="quote">“At Zaiqa, every bite tells a story—of tradition, taste, and togetherness.”</span>
             <span>📍 Lake Oswego</span>
-            <span>📍 Wilsonville</span>
             <span>📍 South Waterfront</span>
-            <span>📍 Ridgefield (Coming Soon)</span>
+            <span>📍 Ridgefield — Opening Friday, September 11</span>
         </div>
     </div>
 
@@ -1406,25 +1542,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Location 2: Wilsonville -->
-                    <div class="location-card">
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=Zaiqa+Indian+Cuisine+-+Wilsonville" target="_blank" class="map-link">
-                            <iframe title="Map to Zaiqa Wilsonville" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d692.341865526609!2d-122.76296518818535!3d45.3101393425939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54956fba7c57eff1%3A0x65d1172f69a01af8!2sZaiqa%20Indian%20Cuisine%20-%20Wilsonville!5e1!3m2!1sen!2sus!4v1755053262102!5m2!1sen!2sus" loading="lazy"></iframe>
-                        </a>
-                        <div class="location-card-content">
-                            <h4>Wilsonville</h4>
-                            <div class="info-item"><i class="fas fa-map-marker-alt"></i><p>29030 SW Town Center Loop E #200, Wilsonville, OR 97070</p></div>
-                            <div class="info-item"><i class="fas fa-phone"></i><p><a href="tel:15038785060">(503) 878-5060</a></p></div>
-                           <div class="info-item"> <i class="fas fa-clock"></i> <p>Mon-Sun: 11:00 AM – 9:00 PM</p></div>
-
-                            <div class="location-card-actions">
-                                <a href="https://order.toasttab.com/online/zaiqa-wilsonville" class="btn btn-primary">Order Online</a>
-                                <button class="btn btn-secondary reserve-button" data-location="wilsonville">Book a Table</button>
-                                <a href="https://order.toasttab.com/egiftcards/zaiqa-wilsonville" class="btn btn-secondary">Gift Cards</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Location 3: South Waterfront -->
+                    <!-- Location 2: South Waterfront -->
                     <div class="location-card">
                         <a href="https://www.google.com/maps/dir/?api=1&destination=Zaiqa+Indian+Cuisine+-+South+Waterfront" target="_blank" class="map-link">
                             <iframe title="Map to Zaiqa South Waterfront" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44171.425690096825!2d-122.7260243432147!3d45.486972273361474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950bf5f0817967%3A0xa81a8bd01b3572c8!2sZaiqa%20Indian%20Cuisine%20-%20South%20Waterfront!5e1!3m2!1sen!2sus!4v1755053300687!5m2!1sen!2sus" loading="lazy"></iframe>
@@ -1441,20 +1559,21 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Location 4: Ridgefield -->
-                    <div class="location-card">
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=536+S+Royle+Rd+Suite+7,+Ridgefield,+WA+98642" target="_blank" class="map-link">
-                            <iframe title="Map to Zaiqa Ridgefield" src="https://maps.google.com/maps?q=536+S+Royle+Rd+Suite+7,+Ridgefield,+WA+98642&z=14&output=embed" loading="lazy"></iframe>
+                    <!-- Location 3: Ridgefield -->
+                    <div class="location-card location-card-new">
+                        <span class="location-badge" aria-label="New location">New</span>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=536+South+Royle+Road+Suite+145,+Ridgefield,+WA+98642" target="_blank" class="map-link">
+                            <iframe title="Map to Zaiqa Ridgefield" src="https://maps.google.com/maps?q=536+South+Royle+Road+Suite+145,+Ridgefield,+WA+98642&z=14&output=embed" loading="lazy"></iframe>
                         </a>
                         <div class="location-card-content">
-                            <h4>Ridgefield, WA</h4>
-                            <div class="info-item"><i class="fas fa-map-marker-alt"></i><p>536 S Royle Rd Suite 7, Ridgefield, WA 98642</p></div>
-                            <div class="info-item"><i class="fas fa-phone"></i><p><a href="tel:15551234567">(555) 123-4567</a></p></div>
+                            <h4>Zaiqa Ridgefield</h4>
+                            <div class="info-item"><i class="fas fa-map-marker-alt"></i><p>536 South Royle Road, Suite 145, Ridgefield, WA 98642</p></div>
+                            <div class="info-item"><i class="fas fa-phone"></i><p><a href="tel:15035483877">(503) 548-3877</a></p></div>
+                            <div class="info-item"><i class="fas fa-calendar-alt"></i><p>Grand Opening: Friday, September 11, 2026</p></div>
                             <div class="info-item"><i class="fas fa-clock"></i><p>Mon–Sun: 11:00 AM – 9:00 PM</p></div>
                             <div class="location-card-actions">
-                                <a href="#" class="btn btn-primary">Coming Soon!</a>
-                                <button class="btn btn-secondary reserve-button" data-location="ridgefield">Coming Soon!</button>
-                                <a href="#" class="btn btn-secondary">Coming Soon!</a>
+                                <a href="https://order.toasttab.com/online/zaiqawa" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Order Online</a>
+                                <a href="https://order.toasttab.com/egiftcards/zaiqawa" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Gift Cards</a>
                             </div>
                         </div>
                     </div>
@@ -1577,6 +1696,22 @@
         </div>
     </footer>
 
+    <!-- Ridgefield Grand Opening Modal -->
+    <div class="modal-overlay" id="grand-opening-modal" role="dialog" aria-modal="true" aria-labelledby="grand-opening-title">
+        <div class="modal-container grand-opening-modal-container">
+            <button class="modal-close" id="grand-opening-modal-close" type="button" aria-label="Close grand opening announcement">&times;</button>
+            <div class="grand-opening-icon" aria-hidden="true">✦</div>
+            <p class="grand-opening-eyebrow">You’re Invited</p>
+            <h2 id="grand-opening-title">Zaiqa Ridgefield Grand Opening</h2>
+            <time class="grand-opening-date" datetime="2026-09-11">Friday, September 11, 2026</time>
+            <p class="grand-opening-address">📍 536 South Royle Road, Suite 145, Ridgefield, WA 98642<br>☎ <a href="tel:15035483877">(503) 548-3877</a></p>
+            <div class="grand-opening-actions">
+                <a href="https://order.toasttab.com/online/zaiqawa" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Order Online</a>
+                <a href="https://order.toasttab.com/egiftcards/zaiqawa" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Gift Cards</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Unified Action Modal -->
     <div class="modal-overlay" id="action-modal">
         <div class="modal-container">
@@ -1591,16 +1726,6 @@
                     <button class="btn btn-secondary reserve-button" data-location="lake-oswego">Book a Table</button>
                     <a href="https://www.toasttab.com/zaiqa-lake-oswego/giftcards" class="btn btn-secondary">Gift Cards</a>
                 </div>
-                <!-- Wilsonville Card -->
-                <div class="modal-location-card">
-                    <h4>Wilsonville</h4>
-                    <p>29030 SW Town Center Loop E #200, Wilsonville, OR 97070</p>
-                    <!-- <a href="https://order.toasttab.com/online/zaiqa-wilsonville" class="btn btn-primary">Order Online</a> -->
-                    <a href="https://order.toasttab.com/online/zaiqa-wilsonville" class="btn btn-primary">Order Online</a>
-                    <button class="btn btn-secondary reserve-button" data-location="wilsonville">Book a Table</button>
-                    <!-- <a href="https://www.toasttab.com/zaiqa-wilsonville/giftcards" class="btn btn-secondary">Gift Cards</a> -->
-                    <a href="https://order.toasttab.com/egiftcards/zaiqa-wilsonville" class="btn btn-secondary">Gift Cards</a>
-                </div>
                 <!-- South Waterfront Card -->
                 <div class="modal-location-card">
                     <h4>South Waterfront</h4>
@@ -1613,11 +1738,10 @@
                 </div>
                 <!-- Ridgefield Card -->
                 <div class="modal-location-card">
-                    <h4>Ridgefield, WA</h4>
-                    <p>536 S Royle Rd Suite 7, Ridgefield, WA 98642</p>
-                    <a href="#" class="btn btn-primary">Coming Soon!</a>
-                    <button class="btn btn-secondary reserve-button" data-location="ridgefield">Coming Soon!</button>
-                    <a href="#" class="btn btn-secondary">Coming Soon!</a>
+                    <h4>Zaiqa Ridgefield</h4>
+                    <p>536 South Royle Road, Suite 145, Ridgefield, WA 98642<br><a href="tel:15035483877">(503) 548-3877</a></p>
+                    <a href="https://order.toasttab.com/online/zaiqawa" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Order Online</a>
+                    <a href="https://order.toasttab.com/egiftcards/zaiqawa" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Gift Cards</a>
                 </div>
             </div>
         </div>
@@ -1742,11 +1866,24 @@
         const socialModal = document.getElementById('social-modal');
         const reservationModal = document.getElementById('reservation-modal');
         const imageLightboxModal = document.getElementById('image-lightbox-modal');
+        const grandOpeningModal = document.getElementById('grand-opening-modal');
         
         setupModal(actionModal, document.querySelectorAll('.action-button'), document.getElementById('action-modal-close'));
         setupModal(socialModal, [], document.getElementById('social-modal-close'));
         setupModal(reservationModal, [], document.getElementById('reservation-modal-close'));
         setupModal(imageLightboxModal, [], document.getElementById('image-lightbox-close'));
+        setupModal(grandOpeningModal, [], document.getElementById('grand-opening-modal-close'));
+
+        if (grandOpeningModal) {
+            grandOpeningModal.classList.add('active');
+            document.getElementById('grand-opening-modal-close').focus();
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.active').forEach(modal => modal.classList.remove('active'));
+            }
+        });
         
         // Social Modal Specific Logic
         const socialLinkTriggers = document.querySelectorAll('.social-link-trigger');
@@ -1754,9 +1891,7 @@
         const socialLocationsGrid = document.getElementById('social-locations-grid');
                   const socialLinks = {
                 'lake-oswego': { facebook: 'https://www.facebook.com/people/Zaiqa-Indian-Cuisine-Lake-Oswego/61578877116542/', instagram: 'https://www.instagram.com/zaiqalakeoswego', tiktok: 'https://www.tiktok.com/@zaiqapdx', yelp: 'https://www.yelp.com/biz/zaiqa-lake-oswego-2' },
-                'wilsonville': { facebook: 'https://www.facebook.com/people/Zaiqa-Indian-Cuisine-Wilsonville/61578849727527/', instagram: 'https://www.instagram.com/zaiqawilsonville/', tiktok: 'https://www.tiktok.com/@zaiqawilsonville', yelp: 'https://www.yelp.com/biz/zaiqa-wilsonville' },
-                'south-waterfront': { facebook: 'https://www.facebook.com/zaiqapdx', instagram: 'https://www.instagram.com/zaiqapdx/', tiktok: 'https://www.tiktok.com/@zaiqapdx', yelp: 'https://www.yelp.com/biz/zaiqa-indian-cuisine-south-waterfront-portland' },
-                'ridgefield': { facebook: '#', instagram: '#', tiktok: '#', yelp: '#' } // Placeholder links
+                'south-waterfront': { facebook: 'https://www.facebook.com/zaiqapdx', instagram: 'https://www.instagram.com/zaiqapdx/', tiktok: 'https://www.tiktok.com/@zaiqapdx', yelp: 'https://www.yelp.com/biz/zaiqa-indian-cuisine-south-waterfront-portland' }
             };
         socialLinkTriggers.forEach(trigger => {
             trigger.addEventListener('click', e => {
@@ -1775,9 +1910,7 @@
         const iframeContainer = document.getElementById('reservationIframeContainer');
         const iframeSources = {
             "lake-oswego": "https://eatapp.co/reserve/zaiqa-indian-cuisine-lake-oswego-15158-bangy-road?source=iframe",
-            "wilsonville": "https://eatapp.co/reserve/zaiqa-indian-cuisine-wilsonville-200-29030-southwest-town-center-loop-east?source=iframe",
-            "south-waterfront": "https://eatapp.co/reserve/zaiqa-indian-cuisine-south-waterfront-3682-south-bond-avenue?source=iframe",
-            "ridgefield": ""
+            "south-waterfront": "https://eatapp.co/reserve/zaiqa-indian-cuisine-south-waterfront-3682-south-bond-avenue?source=iframe"
         };
         openReservationButtons.forEach(button => {
             button.addEventListener('click', (e) => {
@@ -1786,8 +1919,6 @@
                     iframeContainer.innerHTML = `<iframe title="Reservation Widget" frameborder="0" src="${iframeSources[locationKey]}"></iframe>`;
                     if(actionModal) actionModal.classList.remove('active');
                     reservationModal.classList.add('active');
-                } else {
-                    alert('Online reservations for this location are coming soon!');
                 }
             });
         });
