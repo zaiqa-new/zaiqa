@@ -916,68 +916,6 @@
             box-shadow: none;
         }
 
-        /* Grand Opening Announcement */
-        #grand-opening-modal {
-            z-index: 1100;
-        }
-        .grand-opening-modal-container {
-            max-width: 620px;
-            padding: 55px 45px 45px;
-            overflow: hidden;
-            background:
-                radial-gradient(circle at top right, rgba(255,146,72,0.2), transparent 42%),
-                var(--light-bg);
-            border-top: 6px solid var(--primary-color);
-        }
-        .grand-opening-icon {
-            width: 72px;
-            height: 72px;
-            margin: 0 auto 18px;
-            display: grid;
-            place-items: center;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: #fff;
-            font-size: 1.8rem;
-            box-shadow: 0 8px 24px rgba(255,146,72,0.3);
-        }
-        .grand-opening-eyebrow {
-            margin-bottom: 8px;
-            color: var(--secondary-color);
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-        .grand-opening-modal-container h2 {
-            margin-bottom: 10px;
-            color: var(--text-dark);
-        }
-        .grand-opening-date {
-            display: block;
-            margin-bottom: 16px;
-            color: var(--primary-color);
-            font-family: var(--font-heading);
-            font-size: 1.35rem;
-            font-weight: 700;
-        }
-        .grand-opening-address {
-            margin-bottom: 24px;
-            color: #555;
-        }
-        .grand-opening-address a {
-            color: var(--primary-color);
-            font-weight: 700;
-        }
-        .grand-opening-actions {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        .grand-opening-actions .btn {
-            min-width: 180px;
-        }
         button.modal-close {
             padding: 2px 6px;
             border: 0;
@@ -1180,10 +1118,6 @@
             .location-card-content { padding: 20px; }
             .catering-container { gap: 30px; }
             .catering-form-grid { grid-template-columns: 1fr; }
-            .grand-opening-modal-container { padding: 48px 22px 30px; }
-            .grand-opening-modal-container h2 { font-size: 2rem; }
-            .grand-opening-actions { flex-direction: column; }
-            .grand-opening-actions .btn { width: 100%; }
 
             /* MINIMIZE WHY CHOOSE US SECTION */
             .choose-us-grid {
@@ -1697,22 +1631,6 @@
         </div>
     </footer>
 
-    <!-- Ridgefield Grand Opening Modal -->
-    <div class="modal-overlay" id="grand-opening-modal" role="dialog" aria-modal="true" aria-labelledby="grand-opening-title">
-        <div class="modal-container grand-opening-modal-container">
-            <button class="modal-close" id="grand-opening-modal-close" type="button" aria-label="Close grand opening announcement">&times;</button>
-            <div class="grand-opening-icon" aria-hidden="true">✦</div>
-            <p class="grand-opening-eyebrow">You’re Invited</p>
-            <h2 id="grand-opening-title">Zaiqa Ridgefield Grand Opening</h2>
-            <time class="grand-opening-date" datetime="2026-09-11">Friday, September 11, 2026</time>
-            <p class="grand-opening-address">📍 536 South Royle Road, Suite 145, Ridgefield, WA 98642<br>☎ <a href="tel:13603096167">(360) 309-6167</a></p>
-            <div class="grand-opening-actions">
-                <a href="https://order.toasttab.com/online/zaiqawa" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Order Online</a>
-                <a href="https://order.toasttab.com/egiftcards/zaiqawa" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Gift Cards</a>
-            </div>
-        </div>
-    </div>
-
     <!-- Unified Action Modal -->
     <div class="modal-overlay" id="action-modal">
         <div class="modal-container">
@@ -1867,18 +1785,11 @@
         const socialModal = document.getElementById('social-modal');
         const reservationModal = document.getElementById('reservation-modal');
         const imageLightboxModal = document.getElementById('image-lightbox-modal');
-        const grandOpeningModal = document.getElementById('grand-opening-modal');
         
         setupModal(actionModal, document.querySelectorAll('.action-button'), document.getElementById('action-modal-close'));
         setupModal(socialModal, [], document.getElementById('social-modal-close'));
         setupModal(reservationModal, [], document.getElementById('reservation-modal-close'));
         setupModal(imageLightboxModal, [], document.getElementById('image-lightbox-close'));
-        setupModal(grandOpeningModal, [], document.getElementById('grand-opening-modal-close'));
-
-        if (grandOpeningModal) {
-            grandOpeningModal.classList.add('active');
-            document.getElementById('grand-opening-modal-close').focus();
-        }
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
